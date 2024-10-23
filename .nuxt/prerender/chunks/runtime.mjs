@@ -1,21 +1,21 @@
-import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import { defineEventHandler, handleCacheHeaders, splitCookiesString, isEvent, createEvent, fetchWithEvent, getRequestHeader, eventHandler, setHeaders, sendRedirect, proxyRequest, setResponseStatus, setResponseHeader, send, getRequestHeaders, removeResponseHeader, createError, getResponseHeader, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler } from 'file://C:/Source/sniffaris/node_modules/h3/dist/index.mjs';
-import { createFetch as createFetch$1, Headers as Headers$1 } from 'file://C:/Source/sniffaris/node_modules/ofetch/dist/node.mjs';
-import destr from 'file://C:/Source/sniffaris/node_modules/destr/dist/index.mjs';
-import { createCall, createFetch } from 'file://C:/Source/sniffaris/node_modules/unenv/runtime/fetch/index.mjs';
-import { createHooks } from 'file://C:/Source/sniffaris/node_modules/hookable/dist/index.mjs';
-import { klona } from 'file://C:/Source/sniffaris/node_modules/klona/dist/index.mjs';
-import { snakeCase } from 'file://C:/Source/sniffaris/node_modules/scule/dist/index.mjs';
-import defu, { defuFn } from 'file://C:/Source/sniffaris/node_modules/defu/dist/defu.mjs';
-import { hash } from 'file://C:/Source/sniffaris/node_modules/ohash/dist/index.mjs';
-import { parseURL, withoutBase, joinURL, getQuery, withQuery, decodePath, withLeadingSlash, withoutTrailingSlash } from 'file://C:/Source/sniffaris/node_modules/ufo/dist/index.mjs';
-import { createStorage, prefixStorage } from 'file://C:/Source/sniffaris/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file://C:/Source/sniffaris/node_modules/unstorage/drivers/fs.mjs';
-import file_58_47_47_47C_58_47Source_47sniffaris_47node_modules_47nuxt_47dist_47core_47runtime_47nitro_47cache_45driver_46js from 'file:///C:/Source/sniffaris/node_modules/nuxt/dist/core/runtime/nitro/cache-driver.js';
-import unstorage_47drivers_47fs_45lite from 'file://C:/Source/sniffaris/node_modules/unstorage/drivers/fs-lite.mjs';
-import { toRouteMatcher, createRouter } from 'file://C:/Source/sniffaris/node_modules/radix3/dist/index.mjs';
+import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import { defineEventHandler, handleCacheHeaders, splitCookiesString, isEvent, createEvent, fetchWithEvent, getRequestHeader, eventHandler, setHeaders, sendRedirect, proxyRequest, setResponseStatus, setResponseHeader, send, getRequestHeaders, removeResponseHeader, createError, getResponseHeader, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler } from 'file://C:/Source/sniffaris.github.io/node_modules/h3/dist/index.mjs';
+import { createFetch as createFetch$1, Headers as Headers$1 } from 'file://C:/Source/sniffaris.github.io/node_modules/ofetch/dist/node.mjs';
+import destr from 'file://C:/Source/sniffaris.github.io/node_modules/destr/dist/index.mjs';
+import { createCall, createFetch } from 'file://C:/Source/sniffaris.github.io/node_modules/unenv/runtime/fetch/index.mjs';
+import { createHooks } from 'file://C:/Source/sniffaris.github.io/node_modules/hookable/dist/index.mjs';
+import { klona } from 'file://C:/Source/sniffaris.github.io/node_modules/klona/dist/index.mjs';
+import { snakeCase } from 'file://C:/Source/sniffaris.github.io/node_modules/scule/dist/index.mjs';
+import defu, { defuFn } from 'file://C:/Source/sniffaris.github.io/node_modules/defu/dist/defu.mjs';
+import { hash } from 'file://C:/Source/sniffaris.github.io/node_modules/ohash/dist/index.mjs';
+import { parseURL, withoutBase, joinURL, getQuery, withQuery, decodePath, withLeadingSlash, withoutTrailingSlash } from 'file://C:/Source/sniffaris.github.io/node_modules/ufo/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file://C:/Source/sniffaris.github.io/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file://C:/Source/sniffaris.github.io/node_modules/unstorage/drivers/fs.mjs';
+import file_58_47_47_47C_58_47Source_47sniffaris_46github_46io_47node_modules_47nuxt_47dist_47core_47runtime_47nitro_47cache_45driver_46js from 'file:///C:/Source/sniffaris.github.io/node_modules/nuxt/dist/core/runtime/nitro/cache-driver.js';
+import unstorage_47drivers_47fs_45lite from 'file://C:/Source/sniffaris.github.io/node_modules/unstorage/drivers/fs-lite.mjs';
+import { toRouteMatcher, createRouter } from 'file://C:/Source/sniffaris.github.io/node_modules/radix3/dist/index.mjs';
 import { promises } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { dirname, resolve } from 'file://C:/Source/sniffaris/node_modules/pathe/dist/index.mjs';
+import { dirname, resolve } from 'file://C:/Source/sniffaris.github.io/node_modules/pathe/dist/index.mjs';
 
 function getEnv(key, opts) {
   const envKey = snakeCase(key).toUpperCase();
@@ -66,7 +66,7 @@ const appConfig = defuFn(inlineAppConfig);
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "7064f975-a450-42b8-a200-29e9d7b8dd60",
+    "buildId": "796bef23-2a02-4109-a2be-525b7147474a",
     "buildAssetsDir": "/_nuxt/",
     "cdnURL": ""
   },
@@ -139,7 +139,7 @@ new Proxy(/* @__PURE__ */ Object.create(null), {
   }
 });
 
-const serverAssets = [{"baseName":"server","dir":"C:/Source/sniffaris/server/assets"}];
+const serverAssets = [{"baseName":"server","dir":"C:/Source/sniffaris.github.io/server/assets"}];
 
 const assets$1 = createStorage();
 
@@ -151,12 +151,12 @@ const storage = createStorage({});
 
 storage.mount('/assets', assets$1);
 
-storage.mount('internal:nuxt:prerender', file_58_47_47_47C_58_47Source_47sniffaris_47node_modules_47nuxt_47dist_47core_47runtime_47nitro_47cache_45driver_46js({"driver":"file:///C:/Source/sniffaris/node_modules/nuxt/dist/core/runtime/nitro/cache-driver.js","base":"C:/Source/sniffaris/.nuxt/cache/nitro/prerender"}));
-storage.mount('data', unstorage_47drivers_47fs_45lite({"driver":"fsLite","base":"C:\\Source\\sniffaris\\.data\\kv"}));
-storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\Source\\sniffaris","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\Source\\sniffaris\\server","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:\\Source\\sniffaris\\.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:\\Source\\sniffaris\\.nuxt\\cache","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('internal:nuxt:prerender', file_58_47_47_47C_58_47Source_47sniffaris_46github_46io_47node_modules_47nuxt_47dist_47core_47runtime_47nitro_47cache_45driver_46js({"driver":"file:///C:/Source/sniffaris.github.io/node_modules/nuxt/dist/core/runtime/nitro/cache-driver.js","base":"C:/Source/sniffaris.github.io/.nuxt/cache/nitro/prerender"}));
+storage.mount('data', unstorage_47drivers_47fs_45lite({"driver":"fsLite","base":"C:\\Source\\sniffaris.github.io\\.data\\kv"}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\Source\\sniffaris.github.io","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\Source\\sniffaris.github.io\\server","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:\\Source\\sniffaris.github.io\\.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:\\Source\\sniffaris.github.io\\.nuxt\\cache","ignore":["**/node_modules/**","**/.git/**"]}));
 
 function useStorage(base = "") {
   return base ? prefixStorage(storage, base) : storage;
@@ -748,11 +748,11 @@ const _f4b49z = eventHandler((event) => {
   return readAsset(id);
 });
 
-const _lazy_n5ofJZ = () => import('./_/renderer.mjs');
+const _lazy_UWJaOk = () => import('./_/renderer.mjs');
 
 const handlers = [
   { route: '', handler: _f4b49z, lazy: false, middleware: true, method: undefined },
-  { route: '/**', handler: _lazy_n5ofJZ, lazy: true, middleware: false, method: undefined }
+  { route: '/**', handler: _lazy_UWJaOk, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {

@@ -5,10 +5,10 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxi generate && echo sniffaris.co.uk > .output/public/CNAME",
+    "generate": "nuxi generate && echo > .output/public/.nojekyll && echo sniffaris.co.uk > .output/public/CNAME",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -t true"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
