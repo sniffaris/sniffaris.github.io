@@ -2,9 +2,15 @@
   const router = useRouter()
   const nav = [
     { label: 'Home', to: '/' },
-    { label: 'About', to: '/about' },
+    { label: 'About', submenu: [ 
+      {label: 'Me', to: '/aboutMe'}, 
+      {label: 'Sniffari', to: '/aboutSniffari'}] 
+    },
     { label: 'Walks', to: '/walks' },
-    { label: 'Drop-ins', to: '/dropin' },
+    { label: 'Drop-ins', submenu: [ 
+      {label: 'Dogs', to: '/dropinDog'}, 
+      {label: 'Cats', to: '/dropinCat'}]  
+    },
     { label: 'Contact', to: '/contact' },
   ]
 </script>

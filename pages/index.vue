@@ -21,26 +21,11 @@
                         </div>
                     </div>
 
-                    <p>Insured and DBS checked</p>
+                    <p class="text-center">Insured and DBS checked</p>
                 </div>
 
                 <div class="col d-none d-md-block">
                     <img class="img-fluid rounded" src="public\3cm8xt1j.png" />
-                </div>
-            </div>
-            <div class="row">
-                <div class="col d-none d-md-block">
-                    <img class="img-fluid rounded" src="public\m4hyej5h.png" />
-                </div>
-                <div class="col-md-7 fs-5">
-                    <br />
-                    <h3>Curious about the name?</h3>
-                    <br />
-
-                    <p>SNIFFARI – a sniff safari.</p>
-
-                    <p>A dog walk where your pup leads, sniffing and exploring at their own pace. It’s great mental
-                        exercise and turns the walk into a fun, stress-free adventure! </p>
                 </div>
             </div>
         </div>

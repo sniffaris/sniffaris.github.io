@@ -15,8 +15,6 @@
 
                     <p><strong>£15</strong> - 1 hour.</p>
 
-                    <p><strong>£25</strong> - two dogs from the same household.</p>
-
                     <h4>Solo Walks</h4>
 
                     <p>Perfect for dogs who prefer one-on-one time, these walks are fully tailored to meet your dog’s individual needs</p>
@@ -25,9 +23,9 @@
 
                     <p><strong>£14</strong> - 30 Minutes.</p>
 
-                    <p class="fst-italic">Prices may vary if are outside of the Cookridge/Tinshill area - based on travel time.</p>
+                    <p>Before any dog walks, there will be a free consultation to get to know your dog's needs and give you a chance to meet me. If we’re both happy, we’ll begin with a trial period. This allows me to build a bond with your dog and ensure I’m the right fit to care for your furry friend. </p>
 
-                    <p>Before any dog walks, there will be a free consultation to get to know your dog's needs and give you a chance to meet me. If we’re both happy, we’ll begin with a trial period. This allows me to build a bond with your dog and ensure I’m the right fit to care for your furry friend.</p>
+                    <p class="fst-italic">Prices may vary for clients located outside the Cookridge/Tinshill area due to travel time, as well as for services requested outside of my standard working hours (8am to 5pm, Monday to Friday)</p>
                 </div>
                 <div class="col d-none d-md-block">
                     <img class="img-fluid rounded" src="public\2rfej82u.png" />
