@@ -4,11 +4,13 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: "Sniffaris Dog Walking and Pet Care in Cookridge",
+      title: "Sniffaris - Dog Walking and Pet Care in Cookridge",
       meta:[
         { hid: 'description', name: 'description', content: 'Sniffaris offers professional dog walking and pet care services in Cookridge. Trusted and loved by pets and owners alike.' },
         { hid: 'og:title', property: 'og:title', content: 'Sniffaris Dog Walking and Pet Care in Cookridge' },
         { hid: 'og:description', property: 'og:description', content: 'Professional dog walking and pet care services in Cookridge by Sniffaris. Book a walk today!' },
+        { hid: 'og:url', property: 'og:url', content: 'https://sniffaris.co.uk' },
+        { hid: 'og:type', property: 'og:type', content: 'website' },
       ],
       script: [
         {
@@ -28,8 +30,8 @@ export default defineNuxtConfig({
             "description": "Sniffaris provides dog walking and pet care services in the Cookridge area.",
             "geo": {
               "@type": "GeoCoordinates",
-              "latitude": "53.85456",
-              "longitude": "-1.60732"
+              "latitude": "53.858055",
+              "longitude": "-1.625505"
             },
             "sameAs": [
               "https://facebook.com/sniffaris",
