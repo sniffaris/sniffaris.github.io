@@ -4,6 +4,40 @@ export default defineNuxtConfig({
 
   app: {
     head: {
+      title: "Sniffaris Dog Walking and Pet Care in Cookridge",
+      meta:[
+        { hid: 'description', name: 'description', content: 'Sniffaris offers professional dog walking and pet care services in Cookridge. Trusted and loved by pets and owners alike.' },
+        { hid: 'og:title', property: 'og:title', content: 'Sniffaris Dog Walking and Pet Care in Cookridge' },
+        { hid: 'og:description', property: 'og:description', content: 'Professional dog walking and pet care services in Cookridge by Sniffaris. Book a walk today!' },
+      ],
+      script: [
+        {
+          type: 'application/ld+json',
+          children: JSON.stringify({
+            "@context": "http://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Sniffaris",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Cookridge",
+              "addressRegion": "West Yorkshire",
+              "postalCode": "LS16",
+              "addressCountry": "UK"
+            },
+            "url": "https://www.sniffaris.co.uk",
+            "description": "Sniffaris provides dog walking and pet care services in the Cookridge area.",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "53.85456",
+              "longitude": "-1.60732"
+            },
+            "sameAs": [
+              "https://facebook.com/sniffaris",
+              "https://instagram.com/sniffaris"
+            ]
+          })
+        }
+      ],
       link: [
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
         { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
