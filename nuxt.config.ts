@@ -1,10 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  /*hooks: {
-    'prerender:routes' ({ routes }) {
-      routes.clear() // Do not generate any routes (except the defaults)
-    }
-  },*/
   compatibilityDate: '2024-09-22',
 
   app: {
