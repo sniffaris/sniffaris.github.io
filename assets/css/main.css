@@ -46,8 +46,8 @@ nav {
 }
 
 .circle-image {
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
     border: 5px solid #CCE8C8;
     object-fit: cover;

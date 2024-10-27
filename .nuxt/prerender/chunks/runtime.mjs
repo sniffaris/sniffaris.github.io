@@ -66,7 +66,7 @@ const appConfig = defuFn(inlineAppConfig);
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "afaf3ba2-b97d-412c-b753-01b3abd6d939",
+    "buildId": "cc2eb243-0c32-465f-ba9b-1ef735865ef4",
     "buildAssetsDir": "/_nuxt/",
     "cdnURL": ""
   },
@@ -748,7 +748,7 @@ const _f4b49z = eventHandler((event) => {
   return readAsset(id);
 });
 
-const _lazy_UWJaOk = () => import('./_/renderer.mjs');
+const _lazy_UWJaOk = () => import('./_/renderer.mjs').then(function (n) { return n.r; });
 
 const handlers = [
   { route: '', handler: _f4b49z, lazy: false, middleware: true, method: undefined },

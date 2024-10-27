@@ -9,7 +9,7 @@
     { label: 'Walks', to: '/walks' },
     { label: 'Drop-ins', submenu: [ 
       {label: 'Dogs', to: '/dropinDog'}, 
-      {label: 'Cats', to: '/dropinCat'}]  
+      {label: 'Cats & Small pets', to: '/dropinCat'}]  
     },
     { label: 'Contact', to: '/contact' },
   ]
