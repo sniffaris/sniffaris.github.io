@@ -3,13 +3,13 @@
         <div class="container">
             <div class="row">
                 <div class="col d-none d-md-block">
-                    <img class="img-fluid rounded" src="public\78jfdk0u.jpg" />
+                    <img class="img-fluid rounded" src="public\78jfdk0u.jpg" alt="Blind dog enjoying a sniffari in the garden" />
                 </div>
                 <div class="col-md-7 fs-5">
-                    <h2>Drop-ins for dogs</h2>
+                    <h1>Drop-ins for dogs</h1>
                     <div class="text-center d-block d-md-none">
                         <br />
-                        <img class="circle-image" src="public\78jfdk0u.jpg" />
+                        <img class="circle-image" src="public\78jfdk0u.jpg" alt="Blind dog enjoying a sniffari in the garden" />
                     </div>
                     <br />
                     <p>Sniffaris provides a 30-minute drop-in service for times your dog is unable to go on a walk.</p>

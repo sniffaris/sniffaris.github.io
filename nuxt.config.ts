@@ -5,6 +5,9 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: "Sniffaris - Dog Walking and Pet Care in Cookridge",
+      htmlAttrs: {
+        lang: 'en'
+      },
       meta:[
         { hid: 'description', name: 'description', content: 'Sniffaris offers professional dog walking and pet care services in Cookridge. Trusted and loved by pets and owners alike.' },
         { hid: 'og:title', property: 'og:title', content: 'Sniffaris Dog Walking and Pet Care in Cookridge' },

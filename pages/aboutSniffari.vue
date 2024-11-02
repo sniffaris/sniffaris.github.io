@@ -3,10 +3,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7 fs-5">
-                    <h2>What is a sniffari?</h2>
+                    <h1>What is a sniffari?</h1>
                     <div class="text-center d-block d-md-none">
                         <br />
-                        <img class="circle-image" src="public\m4hyej5h.png" />
+                        <img class="circle-image" src="public\m4hyej5h.png" alt="Dog sniffing the air on a Sniffari" />
                     </div>
                     
                     <br />
@@ -33,7 +33,7 @@
                     </ol>
                 </div>
                 <div class="col d-none d-md-block">
-                    <img class="img-fluid rounded" src="public\m4hyej5h.png" />
+                    <img class="img-fluid rounded" src="public\m4hyej5h.png" alt="Dog sniffing the air on a Sniffari" />
                 </div>
             </div>
         </div>

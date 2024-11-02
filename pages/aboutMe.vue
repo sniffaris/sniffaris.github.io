@@ -3,10 +3,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7 fs-5">
-                    <h2>About me</h2>
+                    <h1>About me</h1>
                     <div class="text-center d-block d-md-none">
                         <br />
-                        <img class="circle-image" src="public\zwuu5srb.png" />
+                        <img class="circle-image" src="public\zwuu5srb.png" alt="Woodland dog walk" />
                     </div>
                     
                     <br />
@@ -29,7 +29,7 @@
                         learning takes me next! </p>
                 </div>
                 <div class="col d-none d-md-block">
-                    <img class="img-fluid rounded" src="public\zwuu5srb.png" />
+                    <img class="img-fluid rounded" src="public\zwuu5srb.png" alt="Woodland dog walk" />
                 </div>
             </div>
         </div>

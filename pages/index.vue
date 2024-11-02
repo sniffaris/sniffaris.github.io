@@ -3,10 +3,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7 fs-5">
-                    <h2>Welcome to Sniffaris!</h2>
+                    <h1>Welcome to Sniffaris!</h1>
                     <div class="text-center d-block d-md-none">
                         <br />
-                        <img class="circle-image" src="public\3cm8xt1j.png" />
+                        <img class="circle-image" src="public\3cm8xt1j.png" alt="dog walking in cookridge fields" />
                     </div>
 
                     <br />
@@ -17,7 +17,7 @@
 
                     <div class="row justify-content-center">
                         <div class="col-5 pb-3">
-                            <img class="img-fluid" src="public\96eoa1oo.png" style="border-radius: 100px;" />
+                            <img class="img-fluid" src="public\96eoa1oo.png" style="border-radius: 100px;" alt="Certified dog first aider" />
                         </div>
                     </div>
 
@@ -25,7 +25,7 @@
                 </div>
 
                 <div class="col d-none d-md-block">
-                    <img class="img-fluid rounded" src="public\3cm8xt1j.png" />
+                    <img class="img-fluid rounded" src="public\3cm8xt1j.png" alt="dog walking in cookridge fields" />
                 </div>
             </div>
         </div>

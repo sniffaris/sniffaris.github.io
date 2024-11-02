@@ -3,10 +3,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7 fs-5">
-                    <h2>Dog walks</h2>
+                    <h1>Dog walks</h1>
                     <div class="text-center d-block d-md-none">
                         <br />
-                        <img class="circle-image" src="public\2rfej82u.png" />
+                        <img class="circle-image" src="public\2rfej82u.png" alt="Dog walking in cookridge field" />
                     </div>
                     <br />
                     <h4>Group Walks</h4>
@@ -28,7 +28,7 @@
                     <p class="fst-italic">Prices may vary for clients located outside the Cookridge/Tinshill area due to travel time, as well as for services requested outside of my standard working hours (8am to 5pm, Monday to Friday)</p>
                 </div>
                 <div class="col d-none d-md-block">
-                    <img class="img-fluid rounded" src="public\2rfej82u.png" />
+                    <img class="img-fluid rounded" src="public\2rfej82u.png" alt="Dog walking in cookridge field" />
                 </div>
             </div>
         </div>
