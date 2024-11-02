@@ -14,7 +14,9 @@ import 'file://C:/Source/sniffaris.github.io/node_modules/unstorage/drivers/fs.m
 import 'file:///C:/Source/sniffaris.github.io/node_modules/nuxt/dist/core/runtime/nitro/cache-driver.js';
 import 'file://C:/Source/sniffaris.github.io/node_modules/unstorage/drivers/fs-lite.mjs';
 import 'file://C:/Source/sniffaris.github.io/node_modules/radix3/dist/index.mjs';
+import 'file://C:/Source/sniffaris.github.io/node_modules/vue/index.mjs';
 import 'node:fs';
 import 'node:url';
 import 'file://C:/Source/sniffaris.github.io/node_modules/pathe/dist/index.mjs';
+import 'file://C:/Source/sniffaris.github.io/node_modules/unenv/runtime/npm/consola.mjs';
 //# sourceMappingURL=index.mjs.map
