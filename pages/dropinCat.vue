@@ -3,13 +3,13 @@
         <div class="container">
             <div class="row">
                 <div class="col d-none d-md-block">
-                    <img class="img-fluid rounded" src="public\0oj8dpzk.png" alt="Happy cat rolling on back" />
+                    <NuxtImg :width="523" class="img-fluid rounded" src="/0oj8dpzk.png" alt="Happy cat rolling on back" />
                 </div>
                 <div class="col-md-7 fs-5">
                     <h1>Drop-ins for cats and small pets</h1>
                     <div class="text-center d-block d-md-none">
                         <br />
-                        <img class="circle-image" src="public\0oj8dpzk.png" alt="Happy cat rolling on back" />
+                        <NuxtImg :width="300" class="circle-image" src="/0oj8dpzk.png" alt="Happy cat rolling on back" />
                     </div>
                     <br />
                     <p>Heading out of town? No problem — Sniffaris is here to look after your pets!</p>

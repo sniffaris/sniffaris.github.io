@@ -1,11 +1,22 @@
 export default {
-  "_B5ykp3sf.js": {
+  "_D7M6dsyE.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "B5ykp3sf.js",
+    "file": "D7M6dsyE.js",
     "name": "vue.8fc199ce",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js"
+    ]
+  },
+  "_eAwJtxu3.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "eAwJtxu3.js",
+    "name": "NuxtImg.vue",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -15,13 +26,13 @@ export default {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "Dz9B-9f9.js",
+    "file": "B-cTLooa.js",
     "name": "error-404",
     "src": "node_modules/nuxt/dist/app/components/error-404.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_B5ykp3sf.js"
+      "_D7M6dsyE.js"
     ],
     "css": []
   },
@@ -36,13 +47,13 @@ export default {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "Ciowk2zS.js",
+    "file": "D23PZ6u9.js",
     "name": "error-500",
     "src": "node_modules/nuxt/dist/app/components/error-500.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_B5ykp3sf.js"
+      "_D7M6dsyE.js"
     ],
     "css": []
   },
@@ -57,7 +68,7 @@ export default {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "BI-_4LlP.js",
+    "file": "CSGoLYwF.js",
     "name": "entry",
     "src": "node_modules/nuxt/dist/app/entry.js",
     "isEntry": true,
@@ -81,293 +92,146 @@ export default {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "d6ibFCLK.js",
+    "file": "CXb1BsIG.js",
     "name": "aboutMe",
     "src": "pages/aboutMe.vue",
     "isDynamicEntry": true,
     "imports": [
+      "_eAwJtxu3.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
-    "css": [],
-    "assets": [
-      "zwuu5srb.B32XisYH.png"
-    ]
+    "css": []
   },
-  "aboutMe.BgamVn4B.css": {
-    "file": "aboutMe.BgamVn4B.css",
+  "aboutMe.DyuXBZZk.css": {
+    "file": "aboutMe.DyuXBZZk.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
-  },
-  "zwuu5srb.B32XisYH.png": {
-    "file": "zwuu5srb.B32XisYH.png",
-    "resourceType": "image",
-    "prefetch": true,
-    "mimeType": "image/png"
   },
   "pages/aboutSniffari.vue": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "BX92uCrZ.js",
+    "file": "CuDztHsZ.js",
     "name": "aboutSniffari",
     "src": "pages/aboutSniffari.vue",
     "isDynamicEntry": true,
     "imports": [
+      "_eAwJtxu3.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
-    "css": [],
-    "assets": [
-      "m4hyej5h.CtzC_iyB.png"
-    ]
+    "css": []
   },
-  "aboutSniffari.ButSc0PO.css": {
-    "file": "aboutSniffari.ButSc0PO.css",
+  "aboutSniffari.BRpAtgtK.css": {
+    "file": "aboutSniffari.BRpAtgtK.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
-  },
-  "m4hyej5h.CtzC_iyB.png": {
-    "file": "m4hyej5h.CtzC_iyB.png",
-    "resourceType": "image",
-    "prefetch": true,
-    "mimeType": "image/png"
   },
   "pages/contact.vue": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "BSx_66ff.js",
+    "file": "B332EAjs.js",
     "name": "contact",
     "src": "pages/contact.vue",
     "isDynamicEntry": true,
     "imports": [
+      "_eAwJtxu3.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
-    "css": [],
-    "assets": [
-      "oaxnpj91.CGwniAnZ.png",
-      "nay5sods.s8nM1sFD.png",
-      "30znpq9o.yQcfkU6H.png"
-    ]
+    "css": []
   },
-  "contact.DUezi8Yo.css": {
-    "file": "contact.DUezi8Yo.css",
+  "contact.C83f9gHV.css": {
+    "file": "contact.C83f9gHV.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
-  },
-  "oaxnpj91.CGwniAnZ.png": {
-    "file": "oaxnpj91.CGwniAnZ.png",
-    "resourceType": "image",
-    "prefetch": true,
-    "mimeType": "image/png"
-  },
-  "nay5sods.s8nM1sFD.png": {
-    "file": "nay5sods.s8nM1sFD.png",
-    "resourceType": "image",
-    "prefetch": true,
-    "mimeType": "image/png"
-  },
-  "30znpq9o.yQcfkU6H.png": {
-    "file": "30znpq9o.yQcfkU6H.png",
-    "resourceType": "image",
-    "prefetch": true,
-    "mimeType": "image/png"
   },
   "pages/dropinCat.vue": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "Cdmzar_J.js",
+    "file": "Cm5xpFnb.js",
     "name": "dropinCat",
     "src": "pages/dropinCat.vue",
     "isDynamicEntry": true,
     "imports": [
+      "_eAwJtxu3.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
-    "css": [],
-    "assets": [
-      "0oj8dpzk.Djuks7nQ.png"
-    ]
+    "css": []
   },
-  "dropinCat.j3dW99wc.css": {
-    "file": "dropinCat.j3dW99wc.css",
+  "dropinCat.BGxAldTg.css": {
+    "file": "dropinCat.BGxAldTg.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
-  },
-  "0oj8dpzk.Djuks7nQ.png": {
-    "file": "0oj8dpzk.Djuks7nQ.png",
-    "resourceType": "image",
-    "prefetch": true,
-    "mimeType": "image/png"
   },
   "pages/dropinDog.vue": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "BcB_FCsD.js",
+    "file": "4IkEjfaX.js",
     "name": "dropinDog",
     "src": "pages/dropinDog.vue",
     "isDynamicEntry": true,
     "imports": [
+      "_eAwJtxu3.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
-    "css": [],
-    "assets": [
-      "78jfdk0u.D0vKAdhG.jpg"
-    ]
+    "css": []
   },
-  "dropinDog.CDq62lLq.css": {
-    "file": "dropinDog.CDq62lLq.css",
+  "dropinDog.BhJ9vZ_C.css": {
+    "file": "dropinDog.BhJ9vZ_C.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
-  },
-  "78jfdk0u.D0vKAdhG.jpg": {
-    "file": "78jfdk0u.D0vKAdhG.jpg",
-    "resourceType": "image",
-    "prefetch": true,
-    "mimeType": "image/jpeg"
   },
   "pages/index.vue": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "BVL6GwhX.js",
+    "file": "DPUZSKFp.js",
     "name": "index",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
     "imports": [
+      "_eAwJtxu3.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
-    "css": [],
-    "assets": [
-      "3cm8xt1j.Bp27oT8t.png",
-      "96eoa1oo.DLumNNEY.png"
-    ]
+    "css": []
   },
-  "index.UUFZ21or.css": {
-    "file": "index.UUFZ21or.css",
+  "index.DAYPyL_U.css": {
+    "file": "index.DAYPyL_U.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
-  },
-  "3cm8xt1j.Bp27oT8t.png": {
-    "file": "3cm8xt1j.Bp27oT8t.png",
-    "resourceType": "image",
-    "prefetch": true,
-    "mimeType": "image/png"
-  },
-  "96eoa1oo.DLumNNEY.png": {
-    "file": "96eoa1oo.DLumNNEY.png",
-    "resourceType": "image",
-    "prefetch": true,
-    "mimeType": "image/png"
   },
   "pages/walks.vue": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "edVuZSP6.js",
+    "file": "D5rA0BJm.js",
     "name": "walks",
     "src": "pages/walks.vue",
     "isDynamicEntry": true,
     "imports": [
+      "_eAwJtxu3.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
-    "css": [],
-    "assets": [
-      "2rfej82u.BzpIl4P2.png"
-    ]
+    "css": []
   },
-  "walks.BHnvpN9b.css": {
-    "file": "walks.BHnvpN9b.css",
+  "walks.WI0ZPnn-.css": {
+    "file": "walks.WI0ZPnn-.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
-  },
-  "2rfej82u.BzpIl4P2.png": {
-    "file": "2rfej82u.BzpIl4P2.png",
-    "resourceType": "image",
-    "prefetch": true,
-    "mimeType": "image/png"
-  },
-  "public/0oj8dpzk.png": {
-    "resourceType": "image",
-    "prefetch": true,
-    "mimeType": "image/png",
-    "file": "0oj8dpzk.Djuks7nQ.png",
-    "src": "public/0oj8dpzk.png"
-  },
-  "public/2rfej82u.png": {
-    "resourceType": "image",
-    "prefetch": true,
-    "mimeType": "image/png",
-    "file": "2rfej82u.BzpIl4P2.png",
-    "src": "public/2rfej82u.png"
-  },
-  "public/30znpq9o.png": {
-    "resourceType": "image",
-    "prefetch": true,
-    "mimeType": "image/png",
-    "file": "30znpq9o.yQcfkU6H.png",
-    "src": "public/30znpq9o.png"
-  },
-  "public/3cm8xt1j.png": {
-    "resourceType": "image",
-    "prefetch": true,
-    "mimeType": "image/png",
-    "file": "3cm8xt1j.Bp27oT8t.png",
-    "src": "public/3cm8xt1j.png"
-  },
-  "public/78jfdk0u.jpg": {
-    "resourceType": "image",
-    "prefetch": true,
-    "mimeType": "image/jpeg",
-    "file": "78jfdk0u.D0vKAdhG.jpg",
-    "src": "public/78jfdk0u.jpg"
-  },
-  "public/96eoa1oo.png": {
-    "resourceType": "image",
-    "prefetch": true,
-    "mimeType": "image/png",
-    "file": "96eoa1oo.DLumNNEY.png",
-    "src": "public/96eoa1oo.png"
-  },
-  "public/m4hyej5h.png": {
-    "resourceType": "image",
-    "prefetch": true,
-    "mimeType": "image/png",
-    "file": "m4hyej5h.CtzC_iyB.png",
-    "src": "public/m4hyej5h.png"
-  },
-  "public/nay5sods.png": {
-    "resourceType": "image",
-    "prefetch": true,
-    "mimeType": "image/png",
-    "file": "nay5sods.s8nM1sFD.png",
-    "src": "public/nay5sods.png"
-  },
-  "public/oaxnpj91.png": {
-    "resourceType": "image",
-    "prefetch": true,
-    "mimeType": "image/png",
-    "file": "oaxnpj91.CGwniAnZ.png",
-    "src": "public/oaxnpj91.png"
-  },
-  "public/zwuu5srb.png": {
-    "resourceType": "image",
-    "prefetch": true,
-    "mimeType": "image/png",
-    "file": "zwuu5srb.B32XisYH.png",
-    "src": "public/zwuu5srb.png"
   }
 }

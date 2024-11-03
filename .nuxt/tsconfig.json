@@ -89,6 +89,12 @@
       "#sitemap/*": [
         "../node_modules/@nuxtjs/sitemap/dist/runtime/*"
       ],
+      "#image": [
+        "../node_modules/@nuxt/image/dist/runtime"
+      ],
+      "#image/*": [
+        "../node_modules/@nuxt/image/dist/runtime/*"
+      ],
       "#vue-router": [
         "../node_modules/vue-router"
       ],
@@ -96,7 +102,7 @@
         "./imports"
       ],
       "#app-manifest": [
-        "./manifest/meta/9042d8ee-c423-4db5-8982-c703be049f1a.json"
+        "./manifest/meta/9ce62da0-c971-4fc6-ac07-19c4c98ba7f5.json"
       ],
       "#build": [
         "."
@@ -144,6 +150,8 @@
     "../node_modules/nuxt-site-config/dist/dist/runtime",
     "../node_modules/@nuxtjs/sitemap/runtime",
     "../node_modules/@nuxtjs/sitemap/dist/runtime",
+    "../node_modules/@nuxt/image/runtime",
+    "../node_modules/@nuxt/image/dist/runtime",
     "../node_modules/@nuxt/devtools/runtime",
     "../node_modules/@nuxt/devtools/dist/runtime",
     "../node_modules/@nuxt/telemetry/runtime",
@@ -159,6 +167,8 @@
     "../node_modules/nuxt-site-config/dist/dist/runtime/server",
     "../node_modules/@nuxtjs/sitemap/runtime/server",
     "../node_modules/@nuxtjs/sitemap/dist/runtime/server",
+    "../node_modules/@nuxt/image/runtime/server",
+    "../node_modules/@nuxt/image/dist/runtime/server",
     "../node_modules/@nuxt/devtools/runtime/server",
     "../node_modules/@nuxt/devtools/dist/runtime/server",
     "../node_modules/@nuxt/telemetry/runtime/server",

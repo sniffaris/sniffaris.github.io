@@ -19,4 +19,5 @@ import 'node:fs';
 import 'node:url';
 import 'file://C:/Source/sniffaris.github.io/node_modules/pathe/dist/index.mjs';
 import 'file://C:/Source/sniffaris.github.io/node_modules/unenv/runtime/npm/consola.mjs';
+import 'file://C:/Source/sniffaris.github.io/node_modules/ipx/dist/index.mjs';
 //# sourceMappingURL=index.mjs.map

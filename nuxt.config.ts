@@ -55,8 +55,12 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
   plugins:[{ src: '~/plugins/bootstrap.js', mode: 'client' }],
-  modules: ['@nuxtjs/sitemap'],
+  modules: ['@nuxtjs/sitemap', "@nuxt/image"],
   site: {
     url: 'https://www.sniffaris.co.uk'
+  },
+  image: {
+    format: ['webp'],
+    quality: 80
   }
 })

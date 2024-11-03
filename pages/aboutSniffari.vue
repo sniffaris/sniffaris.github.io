@@ -6,7 +6,7 @@
                     <h1>What is a sniffari?</h1>
                     <div class="text-center d-block d-md-none">
                         <br />
-                        <img class="circle-image" src="public\m4hyej5h.png" alt="Dog sniffing the air on a Sniffari" />
+                        <NuxtImg :width="300" class="circle-image" src="/m4hyej5h.png" alt="Dog sniffing the air on a Sniffari" />
                     </div>
                     
                     <br />
@@ -33,7 +33,7 @@
                     </ol>
                 </div>
                 <div class="col d-none d-md-block">
-                    <img class="img-fluid rounded" src="public\m4hyej5h.png" alt="Dog sniffing the air on a Sniffari" />
+                    <NuxtImg :width="523" class="img-fluid rounded" src="/m4hyej5h.png" alt="Dog sniffing the air on a Sniffari" />
                 </div>
             </div>
         </div>

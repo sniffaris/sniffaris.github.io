@@ -6,7 +6,7 @@
                     <h1>About me</h1>
                     <div class="text-center d-block d-md-none">
                         <br />
-                        <img class="circle-image" src="public\zwuu5srb.png" alt="Woodland dog walk" />
+                        <NuxtImg :width="300" class="circle-image" src="/zwuu5srb.png" alt="Woodland dog walk" />
                     </div>
                     
                     <br />
@@ -29,7 +29,7 @@
                         learning takes me next! </p>
                 </div>
                 <div class="col d-none d-md-block">
-                    <img class="img-fluid rounded" src="public\zwuu5srb.png" alt="Woodland dog walk" />
+                    <NuxtImg :width="523" class="img-fluid rounded" src="/zwuu5srb.png" alt="Woodland dog walk" />
                 </div>
             </div>
         </div>

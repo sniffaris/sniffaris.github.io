@@ -571,37 +571,37 @@ const _routes = [
   {
     name: "aboutMe",
     path: "/aboutMe",
-    component: () => import("./_nuxt/aboutMe-A9gItiDL.js")
+    component: () => import("./_nuxt/aboutMe-BRCYUeQB.js")
   },
   {
     name: "aboutSniffari",
     path: "/aboutSniffari",
-    component: () => import("./_nuxt/aboutSniffari-zOyBXUZ-.js")
+    component: () => import("./_nuxt/aboutSniffari-90ROCLsT.js")
   },
   {
     name: "contact",
     path: "/contact",
-    component: () => import("./_nuxt/contact-DPuSzH9A.js")
+    component: () => import("./_nuxt/contact-BR0ZHxYL.js")
   },
   {
     name: "dropinCat",
     path: "/dropinCat",
-    component: () => import("./_nuxt/dropinCat-Bpm1ivlV.js")
+    component: () => import("./_nuxt/dropinCat-D0OxDQm2.js")
   },
   {
     name: "dropinDog",
     path: "/dropinDog",
-    component: () => import("./_nuxt/dropinDog-C6I4am-F.js")
+    component: () => import("./_nuxt/dropinDog-BVK_dYzd.js")
   },
   {
     name: "index",
     path: "/",
-    component: () => import("./_nuxt/index-BaItfaTY.js")
+    component: () => import("./_nuxt/index-CTSjQfg4.js")
   },
   {
     name: "walks",
     path: "/walks",
-    component: () => import("./_nuxt/walks-6Eiceaok.js")
+    component: () => import("./_nuxt/walks-DeNHl-rh.js")
   }
 ];
 const _wrapIf = (component, props, slots) => {
@@ -1700,8 +1700,11 @@ const entry$1 = (ssrContext) => entry(ssrContext);
 export {
   _export_sfc as _,
   __nuxt_component_0$1 as a,
+  useNuxtApp as b,
+  useRuntimeConfig as c,
   entry$1 as default,
   injectHead as i,
-  resolveUnrefHeadInput as r
+  resolveUnrefHeadInput as r,
+  useRequestEvent as u
 };
 //# sourceMappingURL=server.mjs.map

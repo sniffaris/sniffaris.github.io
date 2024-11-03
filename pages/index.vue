@@ -6,7 +6,7 @@
                     <h1>Welcome to Sniffaris!</h1>
                     <div class="text-center d-block d-md-none">
                         <br />
-                        <img class="circle-image" src="public\3cm8xt1j.png" alt="dog walking in cookridge fields" />
+                        <nuxt-img :width="300" class="circle-image" src="/3cm8xt1j.png" alt="dog walking in cookridge fields" />
                     </div>
 
                     <br />
@@ -17,7 +17,7 @@
 
                     <div class="row justify-content-center">
                         <div class="col-5 pb-3">
-                            <img class="img-fluid" src="public\96eoa1oo.png" style="border-radius: 100px;" alt="Certified dog first aider" />
+                            <nuxt-img :width="293" class="img-fluid" src="/96eoa1oo.png" style="border-radius: 100px;" alt="Certified dog first aider" />
                         </div>
                     </div>
 
@@ -25,7 +25,7 @@
                 </div>
 
                 <div class="col d-none d-md-block">
-                    <img class="img-fluid rounded" src="public\3cm8xt1j.png" alt="dog walking in cookridge fields" />
+                    <nuxt-img :width="523" class="img-fluid rounded" src="/3cm8xt1j.png" alt="dog walking in cookridge fields" />
                 </div>
             </div>
         </div>
