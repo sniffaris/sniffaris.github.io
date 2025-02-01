@@ -9,12 +9,12 @@ html {
 
 nav {
     padding: 1rem;
-    background-color: rgb(20, 55, 14);
+    background-color: #155030;
     font-family: "Montserrat";
 }
 
 .nav-link {
-    color: #CCE8C8;
+    color: #defba8;
     text-decoration: none;
     margin-right: 1rem;
 }
@@ -28,16 +28,12 @@ nav {
 }
 
 .dropdown-menu {
-    background-color: rgb(20, 55, 14);
-    border-color: #CCE8C8;
+    background-color: #155030;
+    border-color: #defba8;
 }
 
 .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
     color: #c76342;
-}
-
-.template-page {
-    min-height: 100vh;
 }
 
 .container {
@@ -49,18 +45,22 @@ nav {
     width: 350px;
     height: 350px;
     border-radius: 50%;
-    border: 5px solid #CCE8C8;
+    border: 5px solid #defba8;
     object-fit: cover;
 }
 
 .custom-toggler.navbar-toggler {
-    border-color: #CCE8C8;
+    border-color: #defba8;
+}
+
+.text-orange {
+    color: #ff9c32;
 }
 
 /* Setting the stroke to green using rgb values (0, 128, 0) */
 
 .custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath stroke='rgba(204, 232, 200, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24' /%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath stroke='rgba(223, 235, 168, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24' /%3E%3C/svg%3E");
 }
 
 @media (max-width: 767.98px) { /* For extra-small screens and below */

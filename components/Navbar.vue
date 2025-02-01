@@ -1,6 +1,10 @@
 <template>
-    <nav class="navbar navbar-expand-md sticky-top border-bottom">
+      <nav class="navbar navbar-expand-md sticky-top border-bottom" style="border-bottom-color: #defba8 !important;">
+        
         <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <nuxt-img :height="100" src="/Sniffaris_Full Logo - (Custom).png" alt="Sniffaris - Dog Walking, Pet Drop-ins" />
+            </a>
             <button class="navbar-toggler ms-auto hidden-sm-up float-xs-right custom-toggler" type="button"
                 data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">

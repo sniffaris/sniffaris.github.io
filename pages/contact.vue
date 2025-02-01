@@ -13,7 +13,10 @@
                     </a>
                 </div>
 
-                <p>Email me at <b><a href="mailto:jessie@sniffaris.co.uk?subject=Enquiry">jessie@sniffaris.co.uk</a> </b> </p>
+                <p>
+                    Email - <a class="text-orange" href="mailto:jessie@sniffaris.co.uk?subject=Enquiry">jessie@sniffaris.co.uk</a><br/>
+                    WhatsApp - <span class="text-orange">0113 534 6009</span>
+                </p>
 
                 <p> I'll do my best to get back to you within 24 hours, Monday to Friday. And just a quick heads-up –
                     don't forget to check your junk mail, in case my response sneaks in there!</p>
@@ -25,13 +28,3 @@
         </div>
     </div>
 </template>
-
-<style scoped>
-    .template-page {
-        background-color: rgb(20, 55, 14);
-        color: #CCE8C8;
-    }
-    a {
-        color: #CCE8C8;
-    }
-</style>

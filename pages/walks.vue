@@ -9,12 +9,6 @@
                         <NuxtImg :width="300" class="circle-image" src="/2rfej82u.png" alt="Dog walking in cookridge field" />
                     </div>
                     <br />
-                    <h4>Group Walks</h4>
-
-                    <p>Small, friendly group walks where your dog can enjoy a fun-filled adventure and a sniffari with their canine companions.</p>
-
-                    <p><strong>£15</strong> - 1 hour.</p>
-
                     <h4>Solo Walks</h4>
 
                     <p>Perfect for dogs who prefer one-on-one time, these walks are fully tailored to meet your dog’s individual needs</p>
@@ -22,6 +16,12 @@
                     <p><strong>£20</strong> - 1 hour.</p>
 
                     <p><strong>£14</strong> - 30 Minutes.</p>
+
+                    <h4>Group Walks</h4>
+
+                    <p>Small, friendly group walks where your dog can enjoy a fun-filled adventure and a sniffari with their canine companions.</p>
+
+                    <p><strong>£15</strong> - 1 hour.</p>
 
                     <p>Before any dog walks, there will be a free consultation to get to know your dog's needs and give you a chance to meet me. If we’re both happy, we’ll begin with a trial period. This allows me to build a bond with your dog and ensure I’m the right fit to care for your furry friend. </p>
 

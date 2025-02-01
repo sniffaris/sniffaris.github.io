@@ -1,19 +1,19 @@
-import { effectScope, shallowReactive, reactive, getCurrentScope, hasInjectionContext, getCurrentInstance, inject, toRef, version, unref, h, shallowRef, isReadonly, isRef, defineComponent, ref, resolveComponent, computed, isShallow, isReactive, toRaw, mergeProps, withCtx, createTextVNode, toDisplayString, useSSRContext, provide, watch, Suspense, nextTick, Fragment, Transition, defineAsyncComponent, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, createApp } from "vue";
+import { effectScope, shallowReactive, reactive, getCurrentScope, hasInjectionContext, getCurrentInstance, inject, toRef, version, unref, ref, watchEffect, watch, h, shallowRef, isReadonly, isRef, defineComponent, resolveComponent, computed, isShallow, isReactive, toRaw, useAttrs, mergeProps, useSSRContext, withCtx, createTextVNode, toDisplayString, provide, Suspense, nextTick, Fragment, Transition, defineAsyncComponent, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, createApp } from "vue";
 import { $fetch } from "ofetch";
 import { baseURL } from "#internal/nuxt/paths";
 import { createHooks } from "hookable";
 import { getContext } from "unctx";
 import { sanitizeStatusCode, createError as createError$1, appendHeader } from "h3";
 import { getActiveHead, CapoPlugin } from "unhead";
-import { defineHeadPlugin } from "@unhead/shared";
-import { START_LOCATION, createMemoryHistory, createRouter as createRouter$1, RouterView } from "vue-router";
+import { defineHeadPlugin, composableNames } from "@unhead/shared";
+import { START_LOCATION, createMemoryHistory, createRouter as createRouter$1, RouterView, useRouter as useRouter$1, useRoute as useRoute$1 } from "vue-router";
 import { toRouteMatcher, createRouter } from "radix3";
 import { defu } from "defu";
-import { hasProtocol, isScriptProtocol, joinURL, withQuery, parseQuery, withTrailingSlash, withoutTrailingSlash } from "ufo";
+import { hasProtocol, isScriptProtocol, joinURL, withQuery, parseQuery, withTrailingSlash, withoutTrailingSlash, withLeadingSlash, parseURL, encodePath, encodeParam } from "ufo";
 import "destr";
 import "klona";
 import "devalue";
-import { ssrRenderAttrs, ssrRenderList, ssrRenderComponent, ssrInterpolate, ssrRenderAttr, ssrRenderSuspense, ssrRenderVNode } from "vue/server-renderer";
+import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrInterpolate, ssrRenderAttr, ssrRenderSuspense, ssrRenderVNode } from "vue/server-renderer";
 if (!globalThis.$fetch) {
   globalThis.$fetch = $fetch.create({
     baseURL: baseURL()
@@ -409,6 +409,33 @@ function injectHead() {
     console.warn("Unhead is missing Vue context, falling back to shared context. This may have unexpected results.");
   return head || getActiveHead();
 }
+function useHead(input, options = {}) {
+  const head = options.head || injectHead();
+  if (head) {
+    if (!head.ssr)
+      return clientUseHead(head, input, options);
+    return head.push(input, options);
+  }
+}
+function clientUseHead(head, input, options = {}) {
+  const deactivated = ref(false);
+  const resolvedInput = ref({});
+  watchEffect(() => {
+    resolvedInput.value = deactivated.value ? {} : resolveUnrefHeadInput(input);
+  });
+  const entry2 = head.push(resolvedInput.value, options);
+  watch(resolvedInput, (e) => {
+    entry2.patch(e);
+  });
+  getCurrentInstance();
+  return entry2;
+}
+const coreComposableNames = [
+  "injectHead"
+];
+({
+  "@unhead/vue": [...coreComposableNames, ...composableNames]
+});
 [CapoPlugin({ track: true })];
 const unhead_KgADcZ0jPj = /* @__PURE__ */ defineNuxtPlugin({
   name: "nuxt:head",
@@ -571,37 +598,32 @@ const _routes = [
   {
     name: "aboutMe",
     path: "/aboutMe",
-    component: () => import("./_nuxt/aboutMe-BRCYUeQB.js")
-  },
-  {
-    name: "aboutSniffari",
-    path: "/aboutSniffari",
-    component: () => import("./_nuxt/aboutSniffari-90ROCLsT.js")
+    component: () => import("./_nuxt/aboutMe-BKtFKROe.js")
   },
   {
     name: "contact",
     path: "/contact",
-    component: () => import("./_nuxt/contact-BR0ZHxYL.js")
+    component: () => import("./_nuxt/contact-CCO6fRx0.js")
   },
   {
     name: "dropinCat",
     path: "/dropinCat",
-    component: () => import("./_nuxt/dropinCat-D0OxDQm2.js")
+    component: () => import("./_nuxt/dropinCat-C41mYris.js")
   },
   {
     name: "dropinDog",
     path: "/dropinDog",
-    component: () => import("./_nuxt/dropinDog-BVK_dYzd.js")
+    component: () => import("./_nuxt/dropinDog-BTRPP8wh.js")
   },
   {
     name: "index",
     path: "/",
-    component: () => import("./_nuxt/index-CTSjQfg4.js")
+    component: () => import("./_nuxt/index-BgZbiEgK.js")
   },
   {
     name: "walks",
     path: "/walks",
-    component: () => import("./_nuxt/walks-DeNHl-rh.js")
+    component: () => import("./_nuxt/walks-DkLDPr_v.js")
   }
 ];
 const _wrapIf = (component, props, slots) => {
@@ -1335,6 +1357,592 @@ const plugins = [
   components_plugin_KR1HBZs4kY,
   prerender_server_LXx1wM9sKF
 ];
+async function imageMeta(_ctx, url) {
+  const meta = await _imageMeta(url).catch((err) => {
+    console.error("Failed to get image meta for " + url, err + "");
+    return {
+      width: 0,
+      height: 0,
+      ratio: 0
+    };
+  });
+  return meta;
+}
+async function _imageMeta(url) {
+  {
+    const imageMeta2 = await import("image-meta").then((r) => r.imageMeta);
+    const data = await fetch(url).then((res) => res.buffer());
+    const metadata = imageMeta2(data);
+    if (!metadata) {
+      throw new Error(`No metadata could be extracted from the image \`${url}\`.`);
+    }
+    const { width, height } = metadata;
+    const meta = {
+      width,
+      height,
+      ratio: width && height ? width / height : void 0
+    };
+    return meta;
+  }
+}
+function createMapper(map) {
+  return (key) => {
+    return key ? map[key] || key : map.missingValue;
+  };
+}
+function createOperationsGenerator({ formatter, keyMap, joinWith = "/", valueMap } = {}) {
+  if (!formatter) {
+    formatter = (key, value) => `${key}=${value}`;
+  }
+  if (keyMap && typeof keyMap !== "function") {
+    keyMap = createMapper(keyMap);
+  }
+  const map = valueMap || {};
+  Object.keys(map).forEach((valueKey) => {
+    if (typeof map[valueKey] !== "function") {
+      map[valueKey] = createMapper(map[valueKey]);
+    }
+  });
+  return (modifiers = {}) => {
+    const operations = Object.entries(modifiers).filter(([_, value]) => typeof value !== "undefined").map(([key, value]) => {
+      const mapper = map[key];
+      if (typeof mapper === "function") {
+        value = mapper(modifiers[key]);
+      }
+      key = typeof keyMap === "function" ? keyMap(key) : key;
+      return formatter(key, value);
+    });
+    return operations.join(joinWith);
+  };
+}
+function parseSize(input = "") {
+  if (typeof input === "number") {
+    return input;
+  }
+  if (typeof input === "string") {
+    if (input.replace("px", "").match(/^\d+$/g)) {
+      return Number.parseInt(input, 10);
+    }
+  }
+}
+function parseDensities(input = "") {
+  if (input === void 0 || !input.length) {
+    return [];
+  }
+  const densities = /* @__PURE__ */ new Set();
+  for (const density of input.split(" ")) {
+    const d = Number.parseInt(density.replace("x", ""));
+    if (d) {
+      densities.add(d);
+    }
+  }
+  return Array.from(densities);
+}
+function checkDensities(densities) {
+  if (densities.length === 0) {
+    throw new Error("`densities` must not be empty, configure to `1` to render regular size only (DPR 1.0)");
+  }
+}
+function parseSizes(input) {
+  const sizes = {};
+  if (typeof input === "string") {
+    for (const entry2 of input.split(/[\s,]+/).filter((e) => e)) {
+      const s = entry2.split(":");
+      if (s.length !== 2) {
+        sizes["1px"] = s[0].trim();
+      } else {
+        sizes[s[0].trim()] = s[1].trim();
+      }
+    }
+  } else {
+    Object.assign(sizes, input);
+  }
+  return sizes;
+}
+function prerenderStaticImages(src = "", srcset = "") {
+  if (!import.meta.prerender) {
+    return;
+  }
+  const paths = [
+    src,
+    ...srcset.split(", ").map((s) => s.trim().split(" ")[0].trim())
+  ].filter((s) => s && s.includes("/_ipx/"));
+  if (!paths.length) {
+    return;
+  }
+  appendHeader(useRequestEvent(), "x-nitro-prerender", paths.map((p) => encodeURIComponent(p)).join(", "));
+}
+function createImage(globalOptions) {
+  const ctx = {
+    options: globalOptions
+  };
+  const getImage2 = (input, options = {}) => {
+    const image = resolveImage(ctx, input, options);
+    if (import.meta.prerender) {
+      prerenderStaticImages(image.url);
+    }
+    return image;
+  };
+  const $img = (input, modifiers = {}, options = {}) => {
+    return getImage2(input, {
+      ...options,
+      modifiers: defu(modifiers, options.modifiers || {})
+    }).url;
+  };
+  for (const presetName in globalOptions.presets) {
+    $img[presetName] = (source, modifiers, options) => $img(source, modifiers, { ...globalOptions.presets[presetName], ...options });
+  }
+  $img.options = globalOptions;
+  $img.getImage = getImage2;
+  $img.getMeta = (input, options) => getMeta(ctx, input, options);
+  $img.getSizes = (input, options) => getSizes(ctx, input, options);
+  ctx.$img = $img;
+  return $img;
+}
+async function getMeta(ctx, input, options) {
+  const image = resolveImage(ctx, input, { ...options });
+  if (typeof image.getMeta === "function") {
+    return await image.getMeta();
+  } else {
+    return await imageMeta(ctx, image.url);
+  }
+}
+function resolveImage(ctx, input, options) {
+  var _a, _b;
+  if (input && typeof input !== "string") {
+    throw new TypeError(`input must be a string (received ${typeof input}: ${JSON.stringify(input)})`);
+  }
+  if (!input || input.startsWith("data:")) {
+    return {
+      url: input
+    };
+  }
+  const { provider, defaults } = getProvider(ctx, options.provider || ctx.options.provider);
+  const preset = getPreset(ctx, options.preset);
+  input = hasProtocol(input) ? input : withLeadingSlash(input);
+  if (!provider.supportsAlias) {
+    for (const base in ctx.options.alias) {
+      if (input.startsWith(base)) {
+        const alias = ctx.options.alias[base];
+        if (alias) {
+          input = joinURL(alias, input.slice(base.length));
+        }
+      }
+    }
+  }
+  if (provider.validateDomains && hasProtocol(input)) {
+    const inputHost = parseURL(input).host;
+    if (!ctx.options.domains.find((d) => d === inputHost)) {
+      return {
+        url: input
+      };
+    }
+  }
+  const _options = defu(options, preset, defaults);
+  _options.modifiers = { ..._options.modifiers };
+  const expectedFormat = _options.modifiers.format;
+  if ((_a = _options.modifiers) == null ? void 0 : _a.width) {
+    _options.modifiers.width = parseSize(_options.modifiers.width);
+  }
+  if ((_b = _options.modifiers) == null ? void 0 : _b.height) {
+    _options.modifiers.height = parseSize(_options.modifiers.height);
+  }
+  const image = provider.getImage(input, _options, ctx);
+  image.format = image.format || expectedFormat || "";
+  return image;
+}
+function getProvider(ctx, name) {
+  const provider = ctx.options.providers[name];
+  if (!provider) {
+    throw new Error("Unknown provider: " + name);
+  }
+  return provider;
+}
+function getPreset(ctx, name) {
+  if (!name) {
+    return {};
+  }
+  if (!ctx.options.presets[name]) {
+    throw new Error("Unknown preset: " + name);
+  }
+  return ctx.options.presets[name];
+}
+function getSizes(ctx, input, opts) {
+  var _a, _b, _c, _d, _e;
+  const width = parseSize((_a = opts.modifiers) == null ? void 0 : _a.width);
+  const height = parseSize((_b = opts.modifiers) == null ? void 0 : _b.height);
+  const sizes = parseSizes(opts.sizes);
+  const densities = ((_c = opts.densities) == null ? void 0 : _c.trim()) ? parseDensities(opts.densities.trim()) : ctx.options.densities;
+  checkDensities(densities);
+  const hwRatio = width && height ? height / width : 0;
+  const sizeVariants = [];
+  const srcsetVariants = [];
+  if (Object.keys(sizes).length >= 1) {
+    for (const key in sizes) {
+      const variant = getSizesVariant(key, String(sizes[key]), height, hwRatio, ctx);
+      if (variant === void 0) {
+        continue;
+      }
+      sizeVariants.push({
+        size: variant.size,
+        screenMaxWidth: variant.screenMaxWidth,
+        media: `(max-width: ${variant.screenMaxWidth}px)`
+      });
+      for (const density of densities) {
+        srcsetVariants.push({
+          width: variant._cWidth * density,
+          src: getVariantSrc(ctx, input, opts, variant, density)
+        });
+      }
+    }
+    finaliseSizeVariants(sizeVariants);
+  } else {
+    for (const density of densities) {
+      const key = Object.keys(sizes)[0];
+      let variant = key ? getSizesVariant(key, String(sizes[key]), height, hwRatio, ctx) : void 0;
+      if (variant === void 0) {
+        variant = {
+          size: "",
+          screenMaxWidth: 0,
+          _cWidth: (_d = opts.modifiers) == null ? void 0 : _d.width,
+          _cHeight: (_e = opts.modifiers) == null ? void 0 : _e.height
+        };
+      }
+      srcsetVariants.push({
+        width: density,
+        src: getVariantSrc(ctx, input, opts, variant, density)
+      });
+    }
+  }
+  finaliseSrcsetVariants(srcsetVariants);
+  const defaultVariant = srcsetVariants[srcsetVariants.length - 1];
+  const sizesVal = sizeVariants.length ? sizeVariants.map((v) => `${v.media ? v.media + " " : ""}${v.size}`).join(", ") : void 0;
+  const suffix = sizesVal ? "w" : "x";
+  const srcsetVal = srcsetVariants.map((v) => `${v.src} ${v.width}${suffix}`).join(", ");
+  return {
+    sizes: sizesVal,
+    srcset: srcsetVal,
+    src: defaultVariant == null ? void 0 : defaultVariant.src
+  };
+}
+function getSizesVariant(key, size, height, hwRatio, ctx) {
+  const screenMaxWidth = ctx.options.screens && ctx.options.screens[key] || Number.parseInt(key);
+  const isFluid = size.endsWith("vw");
+  if (!isFluid && /^\d+$/.test(size)) {
+    size = size + "px";
+  }
+  if (!isFluid && !size.endsWith("px")) {
+    return void 0;
+  }
+  let _cWidth = Number.parseInt(size);
+  if (!screenMaxWidth || !_cWidth) {
+    return void 0;
+  }
+  if (isFluid) {
+    _cWidth = Math.round(_cWidth / 100 * screenMaxWidth);
+  }
+  const _cHeight = hwRatio ? Math.round(_cWidth * hwRatio) : height;
+  return {
+    size,
+    screenMaxWidth,
+    _cWidth,
+    _cHeight
+  };
+}
+function getVariantSrc(ctx, input, opts, variant, density) {
+  return ctx.$img(
+    input,
+    {
+      ...opts.modifiers,
+      width: variant._cWidth ? variant._cWidth * density : void 0,
+      height: variant._cHeight ? variant._cHeight * density : void 0
+    },
+    opts
+  );
+}
+function finaliseSizeVariants(sizeVariants) {
+  var _a;
+  sizeVariants.sort((v1, v2) => v1.screenMaxWidth - v2.screenMaxWidth);
+  let previousMedia = null;
+  for (let i = sizeVariants.length - 1; i >= 0; i--) {
+    const sizeVariant = sizeVariants[i];
+    if (sizeVariant.media === previousMedia) {
+      sizeVariants.splice(i, 1);
+    }
+    previousMedia = sizeVariant.media;
+  }
+  for (let i = 0; i < sizeVariants.length; i++) {
+    sizeVariants[i].media = ((_a = sizeVariants[i + 1]) == null ? void 0 : _a.media) || "";
+  }
+}
+function finaliseSrcsetVariants(srcsetVariants) {
+  srcsetVariants.sort((v1, v2) => v1.width - v2.width);
+  let previousWidth = null;
+  for (let i = srcsetVariants.length - 1; i >= 0; i--) {
+    const sizeVariant = srcsetVariants[i];
+    if (sizeVariant.width === previousWidth) {
+      srcsetVariants.splice(i, 1);
+    }
+    previousWidth = sizeVariant.width;
+  }
+}
+const operationsGenerator = createOperationsGenerator({
+  keyMap: {
+    format: "f",
+    fit: "fit",
+    width: "w",
+    height: "h",
+    resize: "s",
+    quality: "q",
+    background: "b"
+  },
+  joinWith: "&",
+  formatter: (key, val) => encodeParam(key) + "_" + encodeParam(val)
+});
+const getImage = (src, { modifiers = {}, baseURL: baseURL2 } = {}, ctx) => {
+  if (modifiers.width && modifiers.height) {
+    modifiers.resize = `${modifiers.width}x${modifiers.height}`;
+    delete modifiers.width;
+    delete modifiers.height;
+  }
+  const params = operationsGenerator(modifiers) || "_";
+  if (!baseURL2) {
+    baseURL2 = joinURL(ctx.options.nuxt.baseURL, "/_ipx");
+  }
+  return {
+    url: joinURL(baseURL2, params, encodePath(src))
+  };
+};
+const validateDomains = true;
+const supportsAlias = true;
+const ipxStaticRuntime$cPHKFhdPsW = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  getImage,
+  supportsAlias,
+  validateDomains
+}, Symbol.toStringTag, { value: "Module" }));
+const imageOptions = {
+  "screens": {
+    "xs": 320,
+    "sm": 640,
+    "md": 768,
+    "lg": 1024,
+    "xl": 1280,
+    "xxl": 1536,
+    "2xl": 1536
+  },
+  "presets": {},
+  "provider": "ipxStatic",
+  "domains": [],
+  "alias": {},
+  "densities": [
+    1,
+    2
+  ],
+  "format": [
+    "webp",
+    "webp"
+  ],
+  "quality": 80
+};
+imageOptions.providers = {
+  ["ipxStatic"]: { provider: ipxStaticRuntime$cPHKFhdPsW, defaults: {} }
+};
+const useImage = () => {
+  const config = /* @__PURE__ */ useRuntimeConfig();
+  const nuxtApp = useNuxtApp();
+  return nuxtApp.$img || nuxtApp._img || (nuxtApp._img = createImage({
+    ...imageOptions,
+    nuxt: {
+      baseURL: config.app.baseURL
+    },
+    runtimeConfig: config
+  }));
+};
+const baseImageProps = {
+  // input source
+  src: { type: String, required: false },
+  // modifiers
+  format: { type: String, required: false },
+  quality: { type: [Number, String], required: false },
+  background: { type: String, required: false },
+  fit: { type: String, required: false },
+  modifiers: { type: Object, required: false },
+  // options
+  preset: { type: String, required: false },
+  provider: { type: String, required: false },
+  sizes: { type: [Object, String], required: false },
+  densities: { type: String, required: false },
+  preload: {
+    type: [Boolean, Object],
+    required: false
+  },
+  // <img> attributes
+  width: { type: [String, Number], required: false },
+  height: { type: [String, Number], required: false },
+  alt: { type: String, required: false },
+  referrerpolicy: { type: String, required: false },
+  usemap: { type: String, required: false },
+  longdesc: { type: String, required: false },
+  ismap: { type: Boolean, required: false },
+  loading: {
+    type: String,
+    required: false,
+    validator: (val) => ["lazy", "eager"].includes(val)
+  },
+  crossorigin: {
+    type: [Boolean, String],
+    required: false,
+    validator: (val) => ["anonymous", "use-credentials", "", true, false].includes(val)
+  },
+  decoding: {
+    type: String,
+    required: false,
+    validator: (val) => ["async", "auto", "sync"].includes(val)
+  },
+  // csp
+  nonce: { type: [String], required: false }
+};
+const useBaseImage = (props) => {
+  const options = computed(() => {
+    return {
+      provider: props.provider,
+      preset: props.preset
+    };
+  });
+  const attrs = computed(() => {
+    return {
+      width: parseSize(props.width),
+      height: parseSize(props.height),
+      alt: props.alt,
+      referrerpolicy: props.referrerpolicy,
+      usemap: props.usemap,
+      longdesc: props.longdesc,
+      ismap: props.ismap,
+      crossorigin: props.crossorigin === true ? "anonymous" : props.crossorigin || void 0,
+      loading: props.loading,
+      decoding: props.decoding,
+      nonce: props.nonce
+    };
+  });
+  const $img = useImage();
+  const modifiers = computed(() => {
+    return {
+      ...props.modifiers,
+      width: parseSize(props.width),
+      height: parseSize(props.height),
+      format: props.format,
+      quality: props.quality || $img.options.quality,
+      background: props.background,
+      fit: props.fit
+    };
+  });
+  return {
+    options,
+    attrs,
+    modifiers
+  };
+};
+const imgProps = {
+  ...baseImageProps,
+  placeholder: { type: [Boolean, String, Number, Array], required: false },
+  placeholderClass: { type: String, required: false }
+};
+const _sfc_main$4 = /* @__PURE__ */ defineComponent({
+  __name: "NuxtImg",
+  __ssrInlineRender: true,
+  props: imgProps,
+  emits: ["load", "error"],
+  setup(__props, { emit: __emit }) {
+    const props = __props;
+    const attrs = useAttrs();
+    const isServer = true;
+    const $img = useImage();
+    const _base = useBaseImage(props);
+    const placeholderLoaded = ref(false);
+    const imgEl = ref();
+    const sizes = computed(() => $img.getSizes(props.src, {
+      ..._base.options.value,
+      sizes: props.sizes,
+      densities: props.densities,
+      modifiers: {
+        ..._base.modifiers.value,
+        width: parseSize(props.width),
+        height: parseSize(props.height)
+      }
+    }));
+    const imgAttrs = computed(() => {
+      const attrs2 = { ..._base.attrs.value, "data-nuxt-img": "" };
+      if (!props.placeholder || placeholderLoaded.value) {
+        attrs2.sizes = sizes.value.sizes;
+        attrs2.srcset = sizes.value.srcset;
+      }
+      return attrs2;
+    });
+    const placeholder = computed(() => {
+      let placeholder2 = props.placeholder;
+      if (placeholder2 === "") {
+        placeholder2 = true;
+      }
+      if (!placeholder2 || placeholderLoaded.value) {
+        return false;
+      }
+      if (typeof placeholder2 === "string") {
+        return placeholder2;
+      }
+      const size = Array.isArray(placeholder2) ? placeholder2 : typeof placeholder2 === "number" ? [placeholder2, placeholder2] : [10, 10];
+      return $img(props.src, {
+        ..._base.modifiers.value,
+        width: size[0],
+        height: size[1],
+        quality: size[2] || 50,
+        blur: size[3] || 3
+      }, _base.options.value);
+    });
+    const mainSrc = computed(
+      () => props.sizes ? sizes.value.src : $img(props.src, _base.modifiers.value, _base.options.value)
+    );
+    const src = computed(() => placeholder.value ? placeholder.value : mainSrc.value);
+    if (props.preload) {
+      const isResponsive = Object.values(sizes.value).every((v) => v);
+      useHead({
+        link: [{
+          rel: "preload",
+          as: "image",
+          nonce: props.nonce,
+          ...!isResponsive ? { href: src.value } : {
+            href: sizes.value.src,
+            imagesizes: sizes.value.sizes,
+            imagesrcset: sizes.value.srcset
+          },
+          ...typeof props.preload !== "boolean" && props.preload.fetchPriority ? { fetchpriority: props.preload.fetchPriority } : {}
+        }]
+      });
+    }
+    if (import.meta.prerender) {
+      prerenderStaticImages(src.value, sizes.value.srcset);
+    }
+    const nuxtApp = useNuxtApp();
+    nuxtApp.isHydrating;
+    return (_ctx, _push, _parent, _attrs) => {
+      _push(`<img${ssrRenderAttrs(mergeProps({
+        ref_key: "imgEl",
+        ref: imgEl,
+        class: props.placeholder && !placeholderLoaded.value ? props.placeholderClass : void 0
+      }, {
+        ...unref(isServer) ? { onerror: "this.setAttribute('data-error', 1)" } : {},
+        ...imgAttrs.value,
+        ...unref(attrs)
+      }, { src: src.value }, _attrs))}>`);
+    };
+  }
+});
+const _sfc_setup$4 = _sfc_main$4.setup;
+_sfc_main$4.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("node_modules/@nuxt/image/dist/runtime/components/NuxtImg.vue");
+  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
+};
 const _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
   for (const [key, val] of props) {
@@ -1354,12 +1962,22 @@ const _sfc_main$3 = {
   setup(__props) {
     useNuxtApp();
     return (_ctx, _push, _parent, _attrs) => {
+      const _component_nuxt_img = _sfc_main$4;
       const _component_NuxtLink = __nuxt_component_0$1;
-      _push(`<nav${ssrRenderAttrs(mergeProps({ class: "navbar navbar-expand-md sticky-top border-bottom" }, _attrs))} data-v-75e60a4c><div class="container-fluid" data-v-75e60a4c><button class="navbar-toggler ms-auto hidden-sm-up float-xs-right custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-v-75e60a4c><span class="navbar-toggler-icon" data-v-75e60a4c></span></button><div class="collapse navbar-collapse" id="navbarNav" data-v-75e60a4c><ul class="navbar-nav ms-auto text-center" data-v-75e60a4c><!--[-->`);
+      _push(`<nav${ssrRenderAttrs(mergeProps({
+        class: "navbar navbar-expand-md sticky-top border-bottom",
+        style: { "border-bottom-color": "#defba8 !important" }
+      }, _attrs))} data-v-012607af><div class="container-fluid" data-v-012607af><a class="navbar-brand" href="#" data-v-012607af>`);
+      _push(ssrRenderComponent(_component_nuxt_img, {
+        height: 100,
+        src: "/Sniffaris_Full Logo - (Custom).png",
+        alt: "Sniffaris - Dog Walking, Pet Drop-ins"
+      }, null, _parent));
+      _push(`</a><button class="navbar-toggler ms-auto hidden-sm-up float-xs-right custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-v-012607af><span class="navbar-toggler-icon" data-v-012607af></span></button><div class="collapse navbar-collapse" id="navbarNav" data-v-012607af><ul class="navbar-nav ms-auto text-center" data-v-012607af><!--[-->`);
       ssrRenderList(__props.navLinks, (link, index) => {
         _push(`<!--[-->`);
         if (!link.submenu) {
-          _push(`<li class="nav-item" data-v-75e60a4c>`);
+          _push(`<li class="nav-item" data-v-012607af>`);
           _push(ssrRenderComponent(_component_NuxtLink, {
             key: link.label,
             to: link.to,
@@ -1378,9 +1996,9 @@ const _sfc_main$3 = {
           }, _parent));
           _push(`</li>`);
         } else {
-          _push(`<li class="nav-item dropdown" data-v-75e60a4c><a class="nav-link dropdown-toggle" href="#" role="button"${ssrRenderAttr("id", `submenu-${index}`)} data-bs-toggle="dropdown" aria-expanded="false" data-v-75e60a4c>${ssrInterpolate(link.label)}</a><ul class="dropdown-menu"${ssrRenderAttr("aria-labelledby", `submenu-${index}`)} data-v-75e60a4c><!--[-->`);
+          _push(`<li class="nav-item dropdown" data-v-012607af><a class="nav-link dropdown-toggle" href="#" role="button"${ssrRenderAttr("id", `submenu-${index}`)} data-bs-toggle="dropdown" aria-expanded="false" data-v-012607af>${ssrInterpolate(link.label)}</a><ul class="dropdown-menu"${ssrRenderAttr("aria-labelledby", `submenu-${index}`)} data-v-012607af><!--[-->`);
           ssrRenderList(link.submenu, (sublink) => {
-            _push(`<li data-v-75e60a4c>`);
+            _push(`<li data-v-012607af>`);
             _push(ssrRenderComponent(_component_NuxtLink, {
               key: sublink.label,
               to: sublink.to,
@@ -1413,7 +2031,7 @@ _sfc_main$3.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Navbar.vue");
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-const __nuxt_component_0 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-75e60a4c"]]);
+const __nuxt_component_0 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-012607af"]]);
 const RouteProvider = defineComponent({
   props: {
     vnode: {
@@ -1558,16 +2176,26 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   __name: "app",
   __ssrInlineRender: true,
   setup(__props) {
-    useRouter();
+    useRouter$1();
+    const route = useRoute$1();
+    const routeStyle = {
+      "/aboutMe": { background: 'url("/Sniffaris_Background (Lemon).jpg")', textColour: "#155030" },
+      "/dropinDog": { background: 'url("/Sniffaris_Background (Lemon).jpg")', textColour: "#155030" }
+    };
+    const backgroundStyle = computed(() => {
+      var _a, _b;
+      return {
+        backgroundImage: ((_a = routeStyle[route.path]) == null ? void 0 : _a.background) || 'url("/Sniffaris_Background (Green).jpg")',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+        minHeight: "100vh",
+        color: ((_b = routeStyle[route.path]) == null ? void 0 : _b.textColour) || "#defba8"
+      };
+    });
     const nav = [
       { label: "Home", to: "/" },
-      {
-        label: "About",
-        submenu: [
-          { label: "Me", to: "/aboutMe" },
-          { label: "Sniffari", to: "/aboutSniffari" }
-        ]
-      },
+      { label: "About", to: "/aboutMe" },
       { label: "Walks", to: "/walks" },
       {
         label: "Drop-ins",
@@ -1584,7 +2212,10 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
       _push(`<!--[-->`);
       _push(ssrRenderComponent(_component_Navbar, { navLinks: nav }, null, _parent));
       _push(`<main>`);
-      _push(ssrRenderComponent(_component_NuxtPage, { class: "template-page" }, null, _parent));
+      _push(ssrRenderComponent(_component_NuxtPage, {
+        class: "template-page",
+        style: backgroundStyle.value
+      }, null, _parent));
       _push(`</main><!--]-->`);
     };
   }
@@ -1616,8 +2247,8 @@ const _sfc_main$1 = {
     const statusMessage = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import("./_nuxt/error-404-ZewrkBI9.js"));
-    const _Error = defineAsyncComponent(() => import("./_nuxt/error-500-PVq37nEs.js"));
+    const _Error404 = defineAsyncComponent(() => import("./_nuxt/error-404-BTXYBIL3.js"));
+    const _Error = defineAsyncComponent(() => import("./_nuxt/error-500-PuyaBFLl.js"));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
       _push(ssrRenderComponent(unref(ErrorTemplate), mergeProps({ statusCode: unref(statusCode), statusMessage: unref(statusMessage), description: unref(description), stack: unref(stack) }, _attrs), null, _parent));
@@ -1700,11 +2331,8 @@ const entry$1 = (ssrContext) => entry(ssrContext);
 export {
   _export_sfc as _,
   __nuxt_component_0$1 as a,
-  useNuxtApp as b,
-  useRuntimeConfig as c,
+  _sfc_main$4 as b,
   entry$1 as default,
-  injectHead as i,
-  resolveUnrefHeadInput as r,
-  useRequestEvent as u
+  useHead as u
 };
 //# sourceMappingURL=server.mjs.map
