@@ -4,14 +4,15 @@
 
   const router = useRouter()
   const route = useRoute();
+  const img = useImage()
 
   const routeStyle: Record<string, any> = {
-    '/aboutMe': { background : 'url("/Sniffaris_Background (Lemon).jpg")', textColour : '#155030', backgroundColour : '#FFFACF' },
-    '/dropinDog': { background : 'url("/Sniffaris_Background (Lemon).jpg")', textColour : '#155030', backgroundColour : '#FFFACF' }
+    '/aboutMe': { background : '/Sniffaris_Background (Lemon).jpg', textColour : '#155030', backgroundColour : '#FFFACF' },
+    '/dropinDog': { background : '/Sniffaris_Background (Lemon).jpg', textColour : '#155030', backgroundColour : '#FFFACF' }
   };
 
   const backgroundStyle = computed(() => ({
-    backgroundImage: routeStyle[route.path]?.background || 'url("/Sniffaris_Background (Green).jpg")',
+    backgroundImage: `url("${ img(routeStyle[route.path]?.background || '/Sniffaris_Background (Green).jpg', { width: 3840, height: 2160, quality: 80, format: 'jpg' }) }")`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundAttachment: 'fixed', 

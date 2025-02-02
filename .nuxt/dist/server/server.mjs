@@ -2178,14 +2178,15 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   setup(__props) {
     useRouter$1();
     const route = useRoute$1();
+    const img = useImage();
     const routeStyle = {
-      "/aboutMe": { background: 'url("/Sniffaris_Background (Lemon).jpg")', textColour: "#155030", backgroundColour: "#FFFACF" },
-      "/dropinDog": { background: 'url("/Sniffaris_Background (Lemon).jpg")', textColour: "#155030", backgroundColour: "#FFFACF" }
+      "/aboutMe": { background: "/Sniffaris_Background (Lemon).jpg", textColour: "#155030", backgroundColour: "#FFFACF" },
+      "/dropinDog": { background: "/Sniffaris_Background (Lemon).jpg", textColour: "#155030", backgroundColour: "#FFFACF" }
     };
     const backgroundStyle = computed(() => {
       var _a, _b, _c;
       return {
-        backgroundImage: ((_a = routeStyle[route.path]) == null ? void 0 : _a.background) || 'url("/Sniffaris_Background (Green).jpg")',
+        backgroundImage: `url("${img(((_a = routeStyle[route.path]) == null ? void 0 : _a.background) || "/Sniffaris_Background (Green).jpg", { width: 3840, height: 2160, quality: 80, format: "jpg" })}")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
