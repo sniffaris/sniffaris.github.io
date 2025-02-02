@@ -5,7 +5,7 @@
                 <div class="col-md-7 fs-5">
                     <h1>Welcome to Sniffaris!</h1>
                     <div class="text-center d-block d-md-none">
-                        <nuxt-img :width="400" src="/Sniffaris_Pickle Circle (Tea).png" alt="happy whippet dog" />
+                        <nuxt-img :width="350" src="/Sniffaris_Pickle Circle (Tea).png" alt="happy whippet dog" />
                     </div>
 
                     <br />
@@ -20,8 +20,6 @@
                       <br />
                       <p>Insured and DBS checked</p>
                     </div>
-
-                    
                 </div>
 
                 <div class="col d-none d-md-block">

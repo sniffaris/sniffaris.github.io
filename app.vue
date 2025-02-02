@@ -15,7 +15,7 @@
     backgroundImage: `url("${ img(routeStyle[route.path]?.background || '/Sniffaris_Background (Green).jpg', { width: 3840, height: 2160, quality: 80, format: 'jpg' }) }")`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    backgroundAttachment: 'fixed', 
+    backgroundAttachment: 'scroll', 
     minHeight: '100vh',
     color: routeStyle[route.path]?.textColour || '#defba8',
     backgroundColor: routeStyle[route.path]?.backgroundColour || '#155030'

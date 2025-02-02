@@ -618,7 +618,7 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import("./_nuxt/index-B-1ahjH0.js")
+    component: () => import("./_nuxt/index-BudQ3Nav.js")
   },
   {
     name: "walks",
@@ -1965,19 +1965,19 @@ const _sfc_main$3 = {
       const _component_nuxt_img = _sfc_main$4;
       const _component_NuxtLink = __nuxt_component_0$1;
       _push(`<nav${ssrRenderAttrs(mergeProps({
-        class: "navbar navbar-expand-md sticky-top border-bottom",
+        class: "navbar navbar-expand-lg sticky-top border-bottom",
         style: { "border-bottom-color": "#defba8 !important" }
-      }, _attrs))} data-v-012607af><div class="container-fluid" data-v-012607af><a class="navbar-brand" href="#" data-v-012607af>`);
+      }, _attrs))} data-v-f91376e2><div class="container-fluid" data-v-f91376e2><a class="navbar-brand" href="#" data-v-f91376e2>`);
       _push(ssrRenderComponent(_component_nuxt_img, {
         height: 100,
         src: "/Sniffaris_Full Logo - (Custom).png",
         alt: "Sniffaris - Dog Walking, Pet Drop-ins"
       }, null, _parent));
-      _push(`</a><button class="navbar-toggler ms-auto hidden-sm-up float-xs-right custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-v-012607af><span class="navbar-toggler-icon" data-v-012607af></span></button><div class="collapse navbar-collapse" id="navbarNav" data-v-012607af><ul class="navbar-nav ms-auto text-center" data-v-012607af><!--[-->`);
+      _push(`</a><button class="navbar-toggler ms-auto hidden-sm-up float-xs-right custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-v-f91376e2><span class="navbar-toggler-icon" data-v-f91376e2></span></button><div class="collapse navbar-collapse" id="navbarNav" data-v-f91376e2><ul class="navbar-nav ms-auto text-center" data-v-f91376e2><!--[-->`);
       ssrRenderList(__props.navLinks, (link, index) => {
         _push(`<!--[-->`);
         if (!link.submenu) {
-          _push(`<li class="nav-item" data-v-012607af>`);
+          _push(`<li class="nav-item" data-v-f91376e2>`);
           _push(ssrRenderComponent(_component_NuxtLink, {
             key: link.label,
             to: link.to,
@@ -1996,9 +1996,9 @@ const _sfc_main$3 = {
           }, _parent));
           _push(`</li>`);
         } else {
-          _push(`<li class="nav-item dropdown" data-v-012607af><a class="nav-link dropdown-toggle" href="#" role="button"${ssrRenderAttr("id", `submenu-${index}`)} data-bs-toggle="dropdown" aria-expanded="false" data-v-012607af>${ssrInterpolate(link.label)}</a><ul class="dropdown-menu"${ssrRenderAttr("aria-labelledby", `submenu-${index}`)} data-v-012607af><!--[-->`);
+          _push(`<li class="nav-item dropdown" data-v-f91376e2><a class="nav-link dropdown-toggle" href="#" role="button"${ssrRenderAttr("id", `submenu-${index}`)} data-bs-toggle="dropdown" aria-expanded="false" data-v-f91376e2>${ssrInterpolate(link.label)}</a><ul class="dropdown-menu"${ssrRenderAttr("aria-labelledby", `submenu-${index}`)} data-v-f91376e2><!--[-->`);
           ssrRenderList(link.submenu, (sublink) => {
-            _push(`<li data-v-012607af>`);
+            _push(`<li data-v-f91376e2>`);
             _push(ssrRenderComponent(_component_NuxtLink, {
               key: sublink.label,
               to: sublink.to,
@@ -2031,7 +2031,7 @@ _sfc_main$3.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Navbar.vue");
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-const __nuxt_component_0 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-012607af"]]);
+const __nuxt_component_0 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-f91376e2"]]);
 const RouteProvider = defineComponent({
   props: {
     vnode: {
@@ -2189,7 +2189,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
         backgroundImage: `url("${img(((_a = routeStyle[route.path]) == null ? void 0 : _a.background) || "/Sniffaris_Background (Green).jpg", { width: 3840, height: 2160, quality: 80, format: "jpg" })}")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: "fixed",
+        backgroundAttachment: "scroll",
         minHeight: "100vh",
         color: ((_b = routeStyle[route.path]) == null ? void 0 : _b.textColour) || "#defba8",
         backgroundColor: ((_c = routeStyle[route.path]) == null ? void 0 : _c.backgroundColour) || "#155030"

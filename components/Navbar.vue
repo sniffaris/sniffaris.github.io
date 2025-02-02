@@ -1,5 +1,5 @@
 <template>
-      <nav class="navbar navbar-expand-md sticky-top border-bottom" style="border-bottom-color: #defba8 !important;">
+      <nav class="navbar navbar-expand-lg sticky-top border-bottom" style="border-bottom-color: #defba8 !important;">
         
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
