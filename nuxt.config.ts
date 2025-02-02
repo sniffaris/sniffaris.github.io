@@ -10,6 +10,7 @@ export default defineNuxtConfig({
       },
       meta:[
         { hid: 'description', name: 'description', content: 'Sniffaris offers professional dog walking and pet care services in Cookridge. Trusted and loved by pets and owners alike.' },
+        { hid: 'og:image', property: 'og:image', content: 'https://sniffaris.co.uk/Sniffaris_Pickle Circle (Tea).png'},
         { hid: 'og:title', property: 'og:title', content: 'Sniffaris Dog Walking and Pet Care in Cookridge' },
         { hid: 'og:description', property: 'og:description', content: 'Professional dog walking and pet care services in Cookridge by Sniffaris. Book a walk today!' },
         { hid: 'og:url', property: 'og:url', content: 'https://sniffaris.co.uk' },

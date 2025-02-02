@@ -18,7 +18,7 @@
                     <p>For enquiries, please get in touch: </p>
                     <div>
                       Email - <a class="text-orange" href="mailto:jessie@sniffaris.co.uk?subject=Enquiry">jessie@sniffaris.co.uk</a><br/>
-                      WhatsApp - <span class="text-orange">0113 534 6009</span>
+                      WhatsApp - <a class="text-orange" href="https://wa.me/441135346009">0113 534 6009</a>
                     </div>
                     <div>
                       <br />

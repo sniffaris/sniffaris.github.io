@@ -603,7 +603,7 @@ const _routes = [
   {
     name: "contact",
     path: "/contact",
-    component: () => import("./_nuxt/contact-CCO6fRx0.js")
+    component: () => import("./_nuxt/contact-BAK7-uA0.js")
   },
   {
     name: "dropinCat",
@@ -618,7 +618,7 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import("./_nuxt/index-_pofu4sU.js")
+    component: () => import("./_nuxt/index-wpGjmHo9.js")
   },
   {
     name: "walks",
