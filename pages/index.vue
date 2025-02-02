@@ -1,10 +1,14 @@
+<script setup lang="ts">
+  import InteractiveIcons from '~/components/InteractiveIcons.vue';
+</script>
+
 <template>
     <div>
         <div class="container">
             <div class="row">
-                <div class="col-md-7 fs-5">
+                <div class="col-lg-7 fs-5">
                     <h1>Welcome to Sniffaris!</h1>
-                    <div class="text-center d-block d-md-none">
+                    <div class="text-center d-block d-lg-none">
                         <nuxt-img :width="350" src="/Sniffaris_Pickle Circle (Tea).png" alt="happy whippet dog" />
                     </div>
 
@@ -22,19 +26,62 @@
                     </div>
                 </div>
 
-                <div class="col d-none d-md-block">
+                <div class="col d-none d-lg-block">
                     <div class="position-relative d-inline-block">
                        <nuxt-img :width="523" class="img-fluid rounded" src="/Sniffaris_Pickle Circle (Tea).png" alt="happy whippet dog" />
                        <nuxt-img :width="293" class="position-absolute overlay-image" src="/96eoa1oo.png" style="border-radius: 100px;" alt="Certified dog first aider" />
                     </div>
-                    
                 </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-7 fs-5">
+                <br/>
+                <h1>What is a sniffari?</h1>
+
+                <p>It is a sniff safari!</p>
+
+                <p>A dog walk where your pup leads, sniffing and exploring at their own pace. Tapping into a dog’s natural behaviours and satisfies their curiosity, keeping them happy, relaxed, and mentally enriched.</p>
+              </div>
+              <div class="col d-none d-lg-block align-self-end position-relative pointer-tip">
+                <div class="pointer-tip text">
+                  <p>
+                    Hover over the icons to find out more
+                  </p>
+                </div>
+                <div class="pointer-tip image">
+                  <nuxt-img :width="200" class="img-fluid" src="/Arrow.png" />
+                </div>
+              </div>
+              <div class="col-md-7 fs-5 d-block d-lg-none">
+                <p>
+                  Tap the icons to find out more
+                </p>
+              </div>
+              <InteractiveIcons />
             </div>
         </div>
     </div>
 </template>
 
 <style scoped>
+
+.pointer-tip {
+  height: 70px;
+}
+
+.pointer-tip.text {
+  position: absolute;
+  top: 0px;
+  right: 100px;
+  width: 200px;
+  text-align: center;
+}
+
+.pointer-tip.image {
+  position: absolute;
+  top: 50px;
+  right: 185px;
+}
 
 .overlay-image {
   bottom: -150px; /* Moves it slightly below */
