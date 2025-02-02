@@ -6,7 +6,7 @@
                     <h1>About me</h1>
                     <div class="text-center d-block d-md-none">
                         <br />
-                        <NuxtImg :width="300" class="circle-image" src="/zwuu5srb.png" alt="Woodland dog walk" />
+                        <NuxtImg :width="300" class="circle-image dark" src="/zwuu5srb.png" alt="Woodland dog walk" />
                     </div>
                     
                     <br />
@@ -35,13 +35,3 @@
         </div>
     </div>
 </template>
-
-<style scoped>
-
-    .circle-image {
-        width: 300px;
-        height: 300px;
-        border: 5px solid rgb(20, 55, 14);
-    }
-    
-</style>

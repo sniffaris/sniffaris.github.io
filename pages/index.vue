@@ -5,8 +5,7 @@
                 <div class="col-md-7 fs-5">
                     <h1>Welcome to Sniffaris!</h1>
                     <div class="text-center d-block d-md-none">
-                        <br />
-                        <nuxt-img :width="300" class="circle-image" src="/3cm8xt1j.png" alt="dog walking in cookridge fields" />
+                        <nuxt-img :width="400" src="/Sniffaris_Pickle Circle (Tea).png" alt="happy whippet dog" />
                     </div>
 
                     <br />
@@ -27,7 +26,7 @@
 
                 <div class="col d-none d-md-block">
                     <div class="position-relative d-inline-block">
-                       <nuxt-img :width="523" class="img-fluid rounded" src="/Sniffaris_Pickle Circle (Tea).png" alt="dog walking in cookridge fields" />
+                       <nuxt-img :width="523" class="img-fluid rounded" src="/Sniffaris_Pickle Circle (Tea).png" alt="happy whippet dog" />
                        <nuxt-img :width="293" class="position-absolute overlay-image" src="/96eoa1oo.png" style="border-radius: 100px;" alt="Certified dog first aider" />
                     </div>
                     
@@ -38,12 +37,6 @@
 </template>
 
 <style scoped>
-
-.circle-image {
-    width: 300px;
-    height: 300px;
-    border: 5px solid #CCE8C8;
-}
 
 .overlay-image {
   bottom: -150px; /* Moves it slightly below */

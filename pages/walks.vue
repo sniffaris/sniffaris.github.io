@@ -34,15 +34,3 @@
         </div>
     </div>
 </template>
-
-<style scoped>
-    .template-page {
-        background-color: rgb(20, 55, 14);
-        color: #CCE8C8;
-    }
-    .circle-image {
-        width: 300px;
-        height: 300px;
-        border: 5px solid #CCE8C8;
-    }
-</style>

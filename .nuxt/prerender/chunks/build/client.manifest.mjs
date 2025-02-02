@@ -1,10 +1,10 @@
 const client_manifest = {
-  "_Dy8wqwmw.js": {
+  "_B5KqTUiB.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "Dy8wqwmw.js",
+    "file": "B5KqTUiB.js",
     "name": "vue.8fc199ce",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
@@ -15,13 +15,13 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "-rud9k_x.js",
+    "file": "DX6v6_qD.js",
     "name": "error-404",
     "src": "node_modules/nuxt/dist/app/components/error-404.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_Dy8wqwmw.js"
+      "_B5KqTUiB.js"
     ],
     "css": []
   },
@@ -36,13 +36,13 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "8f2JpGAc.js",
+    "file": "gG5hO7rX.js",
     "name": "error-500",
     "src": "node_modules/nuxt/dist/app/components/error-500.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_Dy8wqwmw.js"
+      "_B5KqTUiB.js"
     ],
     "css": []
   },
@@ -57,7 +57,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "D3heaLKK.js",
+    "file": "BHxRYXrI.js",
     "name": "entry",
     "src": "node_modules/nuxt/dist/app/entry.js",
     "isEntry": true,
@@ -81,27 +81,20 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "B3n98LYb.js",
+    "file": "Bw_rXzbc.js",
     "name": "aboutMe",
     "src": "pages/aboutMe.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
-    ],
-    "css": []
-  },
-  "aboutMe.C2u11-1n.css": {
-    "file": "aboutMe.C2u11-1n.css",
-    "resourceType": "style",
-    "prefetch": true,
-    "preload": true
+    ]
   },
   "pages/contact.vue": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "P45dfE7i.js",
+    "file": "CWXFuFPy.js",
     "name": "contact",
     "src": "pages/contact.vue",
     "isDynamicEntry": true,
@@ -114,47 +107,33 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "BOxNlCg9.js",
+    "file": "BMDcFnYD.js",
     "name": "dropinCat",
     "src": "pages/dropinCat.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
-    ],
-    "css": []
-  },
-  "dropinCat.BGxAldTg.css": {
-    "file": "dropinCat.BGxAldTg.css",
-    "resourceType": "style",
-    "prefetch": true,
-    "preload": true
+    ]
   },
   "pages/dropinDog.vue": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "Di_7GKBa.js",
+    "file": "_MoBYZo7.js",
     "name": "dropinDog",
     "src": "pages/dropinDog.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
-    ],
-    "css": []
-  },
-  "dropinDog.BiOtZIL5.css": {
-    "file": "dropinDog.BiOtZIL5.css",
-    "resourceType": "style",
-    "prefetch": true,
-    "preload": true
+    ]
   },
   "pages/index.vue": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "Tsw0Xlog.js",
+    "file": "dRI67gnL.js",
     "name": "index",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
@@ -163,8 +142,8 @@ const client_manifest = {
     ],
     "css": []
   },
-  "index.Ddf5hWWv.css": {
-    "file": "index.Ddf5hWWv.css",
+  "index.CggS4mKY.css": {
+    "file": "index.CggS4mKY.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
@@ -174,20 +153,13 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "BBV3VPWT.js",
+    "file": "8bv8tLw9.js",
     "name": "walks",
     "src": "pages/walks.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
-    ],
-    "css": []
-  },
-  "walks.BqdCK8SX.css": {
-    "file": "walks.BqdCK8SX.css",
-    "resourceType": "style",
-    "prefetch": true,
-    "preload": true
+    ]
   }
 };
 

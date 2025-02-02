@@ -598,7 +598,7 @@ const _routes = [
   {
     name: "aboutMe",
     path: "/aboutMe",
-    component: () => import("./_nuxt/aboutMe-BKtFKROe.js")
+    component: () => import("./_nuxt/aboutMe-CTsnpVgr.js")
   },
   {
     name: "contact",
@@ -608,22 +608,22 @@ const _routes = [
   {
     name: "dropinCat",
     path: "/dropinCat",
-    component: () => import("./_nuxt/dropinCat-C41mYris.js")
+    component: () => import("./_nuxt/dropinCat-CeoksfRf.js")
   },
   {
     name: "dropinDog",
     path: "/dropinDog",
-    component: () => import("./_nuxt/dropinDog-BTRPP8wh.js")
+    component: () => import("./_nuxt/dropinDog-LwD6zBXX.js")
   },
   {
     name: "index",
     path: "/",
-    component: () => import("./_nuxt/index-BgZbiEgK.js")
+    component: () => import("./_nuxt/index-B-1ahjH0.js")
   },
   {
     name: "walks",
     path: "/walks",
-    component: () => import("./_nuxt/walks-DkLDPr_v.js")
+    component: () => import("./_nuxt/walks-Buz7aNYm.js")
   }
 ];
 const _wrapIf = (component, props, slots) => {
@@ -2179,18 +2179,19 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
     useRouter$1();
     const route = useRoute$1();
     const routeStyle = {
-      "/aboutMe": { background: 'url("/Sniffaris_Background (Lemon).jpg")', textColour: "#155030" },
-      "/dropinDog": { background: 'url("/Sniffaris_Background (Lemon).jpg")', textColour: "#155030" }
+      "/aboutMe": { background: 'url("/Sniffaris_Background (Lemon).jpg")', textColour: "#155030", backgroundColour: "#FFFACF" },
+      "/dropinDog": { background: 'url("/Sniffaris_Background (Lemon).jpg")', textColour: "#155030", backgroundColour: "#FFFACF" }
     };
     const backgroundStyle = computed(() => {
-      var _a, _b;
+      var _a, _b, _c;
       return {
         backgroundImage: ((_a = routeStyle[route.path]) == null ? void 0 : _a.background) || 'url("/Sniffaris_Background (Green).jpg")',
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
         minHeight: "100vh",
-        color: ((_b = routeStyle[route.path]) == null ? void 0 : _b.textColour) || "#defba8"
+        color: ((_b = routeStyle[route.path]) == null ? void 0 : _b.textColour) || "#defba8",
+        backgroundColor: ((_c = routeStyle[route.path]) == null ? void 0 : _c.backgroundColour) || "#155030"
       };
     });
     const nav = [
@@ -2209,14 +2210,11 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
     return (_ctx, _push, _parent, _attrs) => {
       const _component_Navbar = __nuxt_component_0;
       const _component_NuxtPage = __nuxt_component_1;
-      _push(`<!--[-->`);
+      _push(`<div${ssrRenderAttrs(mergeProps({ style: backgroundStyle.value }, _attrs))}>`);
       _push(ssrRenderComponent(_component_Navbar, { navLinks: nav }, null, _parent));
       _push(`<main>`);
-      _push(ssrRenderComponent(_component_NuxtPage, {
-        class: "template-page",
-        style: backgroundStyle.value
-      }, null, _parent));
-      _push(`</main><!--]-->`);
+      _push(ssrRenderComponent(_component_NuxtPage, { class: "template-page" }, null, _parent));
+      _push(`</main></div>`);
     };
   }
 });

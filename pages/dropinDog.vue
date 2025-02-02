@@ -9,7 +9,7 @@
                     <h1>Drop-ins for dogs</h1>
                     <div class="text-center d-block d-md-none">
                         <br />
-                        <NuxtImg :width="300" class="circle-image" src="/PXL_20241203_145404589.PORTRAIT.jpg" alt="Blind dog enjoying a sniffari in the garden" />
+                        <NuxtImg :width="300" class="circle-image dark" src="/PXL_20241203_145404589.PORTRAIT.jpg" alt="Blind dog enjoying a sniffari in the garden" />
                     </div>
                     <br />
                     <p>Sniffaris provides a 30-minute drop-in service for times your dog is unable to go on a walk.</p>
@@ -26,15 +26,3 @@
         </div>
     </div>
 </template>
-
-<style scoped>
-    .template-page {
-        background-color: #CCE8C8; 
-        color: rgb(20, 55, 14);
-    }
-    .circle-image {
-        width: 300px;
-        height: 300px;
-        border: 5px solid rgb(20, 55, 14);
-    }
-</style>

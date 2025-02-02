@@ -28,15 +28,3 @@
         </div>
     </div>
 </template>
-
-<style scoped>
-    .template-page {
-        background-color: #CCE8C8; 
-        color: rgb(20, 55, 14);
-    }
-    .circle-image {
-        width: 300px;
-        height: 300px;
-        border: 5px solid rgb(20, 55, 14);
-    }
-</style>

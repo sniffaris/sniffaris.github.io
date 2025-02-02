@@ -6,8 +6,8 @@
   const route = useRoute();
 
   const routeStyle: Record<string, any> = {
-    '/aboutMe': { background : 'url("/Sniffaris_Background (Lemon).jpg")', textColour : '#155030' },
-    '/dropinDog': { background : 'url("/Sniffaris_Background (Lemon).jpg")', textColour : '#155030' }
+    '/aboutMe': { background : 'url("/Sniffaris_Background (Lemon).jpg")', textColour : '#155030', backgroundColour : '#FFFACF' },
+    '/dropinDog': { background : 'url("/Sniffaris_Background (Lemon).jpg")', textColour : '#155030', backgroundColour : '#FFFACF' }
   };
 
   const backgroundStyle = computed(() => ({
@@ -17,6 +17,7 @@
     backgroundAttachment: 'fixed', 
     minHeight: '100vh',
     color: routeStyle[route.path]?.textColour || '#defba8',
+    backgroundColor: routeStyle[route.path]?.backgroundColour || '#155030'
   }));
 
   const nav = [
@@ -32,8 +33,10 @@
 </script>
 
 <template>
-  <Navbar :navLinks="nav"/>
-  <main>
-    <NuxtPage class="template-page" :style="backgroundStyle" />
-  </main>
+  <div :style="backgroundStyle">
+    <Navbar :navLinks="nav"/>
+    <main>
+      <NuxtPage class="template-page"  />
+    </main>
+  </div>
 </template>

@@ -3,14 +3,15 @@
 }
 
 html {
-    font-family: "Montserrat";
+    font-family: "ff-providence-sans-web-pro", "Montserrat", sans-serif;
     font-size: large;
 }
 
 nav {
     padding: 1rem;
     background-color: #155030;
-    font-family: "Montserrat";
+    font-family: "ff-providence-sans-web-pro", "Montserrat", sans-serif;
+    font-size: larger;
 }
 
 .nav-link {
@@ -37,8 +38,8 @@ nav {
 }
 
 .container {
-    padding-top: 20px;
-    font-family: "Montserrat";
+    padding-top: 40px;
+    font-family: "ff-providence-sans-web-pro", "Montserrat", sans-serif;
 }
 
 .circle-image {
@@ -47,6 +48,10 @@ nav {
     border-radius: 50%;
     border: 5px solid #defba8;
     object-fit: cover;
+}
+
+.circle-image.dark {
+  border: 5px solid #155030;
 }
 
 .custom-toggler.navbar-toggler {
