@@ -4,15 +4,15 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: "Sniffaris - Dog Walking and Pet Care in Cookridge",
+      title: "Dog Walking in Cookridge, Leeds | Sniffaris",
       htmlAttrs: {
         lang: 'en'
       },
       meta:[
-        { hid: 'description', name: 'description', content: 'Sniffaris offers professional dog walking and pet care services in Cookridge. Trusted and loved by pets and owners alike.' },
+        { hid: 'description', name: 'description', content: 'Looking for reliable dog walking in Cookridge, Leeds? Sniffaris offers fun and safe walks for your furry friends.' },
         { hid: 'og:image', property: 'og:image', content: 'https://sniffaris.co.uk/Sniffaris_Pickle Circle (Tea).png'},
-        { hid: 'og:title', property: 'og:title', content: 'Sniffaris Dog Walking and Pet Care in Cookridge' },
-        { hid: 'og:description', property: 'og:description', content: 'Professional dog walking and pet care services in Cookridge by Sniffaris. Book a walk today!' },
+        { hid: 'og:title', property: 'og:title', content: 'Dog Walking in Cookridge, Leeds | Sniffaris' },
+        { hid: 'og:description', property: 'og:description', content: 'Looking for reliable dog walking in Cookridge, Leeds? Sniffaris offers fun and safe walks for your furry friends.' },
         { hid: 'og:url', property: 'og:url', content: 'https://sniffaris.co.uk' },
         { hid: 'og:type', property: 'og:type', content: 'website' },
       ],
@@ -27,11 +27,11 @@ export default defineNuxtConfig({
               "@type": "PostalAddress",
               "addressLocality": "Cookridge",
               "addressRegion": "West Yorkshire",
-              "postalCode": "LS16",
+              "postalCode": "LS16 7JF",
               "addressCountry": "UK"
             },
             "url": "https://www.sniffaris.co.uk",
-            "description": "Sniffaris provides dog walking and pet care services in the Cookridge area.",
+            "description": "Looking for reliable dog walking in Cookridge, Leeds? Sniffaris offers fun and safe walks for your furry friends.",
             "geo": {
               "@type": "GeoCoordinates",
               "latitude": "53.858055",

@@ -618,12 +618,12 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import("./_nuxt/index-wpGjmHo9.js")
+    component: () => import("./_nuxt/index-BUuniEoO.js")
   },
   {
     name: "walks",
     path: "/walks",
-    component: () => import("./_nuxt/walks-Buz7aNYm.js")
+    component: () => import("./_nuxt/walks-KpiAQvOD.js")
   }
 ];
 const _wrapIf = (component, props, slots) => {

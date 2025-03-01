@@ -36,7 +36,7 @@
             <div class="row">
               <div class="col-lg-7 fs-5">
                 <br/>
-                <h1>What is a sniffari?</h1>
+                <h2 class="h1">What is a sniffari?</h2>
 
                 <p>It is a sniff safari!</p>
 
@@ -49,7 +49,7 @@
                   </p>
                 </div>
                 <div class="pointer-tip image">
-                  <nuxt-img :width="200" class="img-fluid" src="/Arrow.png" />
+                  <nuxt-img :width="200" class="img-fluid" src="/Arrow.png" alt="tips and pointers" />
                 </div>
               </div>
               <div class="col-md-7 fs-5 d-block d-lg-none">

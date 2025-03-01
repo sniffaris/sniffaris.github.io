@@ -6,7 +6,7 @@
                     <h1>Dog walks</h1>
                     <div class="text-center d-block d-md-none">
                         <br />
-                        <NuxtImg :width="300" class="circle-image" src="/2rfej82u.png" alt="Dog walking in cookridge field" />
+                        <NuxtImg :width="300" class="circle-image" src="/2rfej82u.png" alt="Dog walking in Cookridge LS16" />
                     </div>
                     <br />
                     <h4>Solo Walks</h4>
@@ -28,7 +28,7 @@
                     <p class="fst-italic">Prices may vary for clients located outside the Cookridge/Tinshill area due to travel time, as well as for services requested outside of my standard working hours (8am to 5pm, Monday to Friday)</p>
                 </div>
                 <div class="col d-none d-md-block">
-                    <NuxtImg :width="520"  class="img-fluid rounded" src="/2rfej82u.png" alt="Dog walking in cookridge field" />
+                    <NuxtImg :width="520"  class="img-fluid rounded" src="/2rfej82u.png" alt="Dog walking in Cookridge LS16" />
                 </div>
             </div>
         </div>
