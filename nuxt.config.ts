@@ -10,10 +10,10 @@ export default defineNuxtConfig({
       },
       meta:[
         { hid: 'description', name: 'description', content: 'Looking for reliable dog walking in Cookridge, Leeds? Sniffaris offers fun and safe walks for your furry friends.' },
-        { hid: 'og:image', property: 'og:image', content: 'https://sniffaris.co.uk/Sniffaris_Pickle Circle (Tea).png'},
+        { hid: 'og:image', property: 'og:image', content: 'https://www.sniffaris.co.uk/Sniffaris_Pickle Circle (Tea).png'},
         { hid: 'og:title', property: 'og:title', content: 'Dog Walking in Cookridge, Leeds | Sniffaris' },
         { hid: 'og:description', property: 'og:description', content: 'Looking for reliable dog walking in Cookridge, Leeds? Sniffaris offers fun and safe walks for your furry friends.' },
-        { hid: 'og:url', property: 'og:url', content: 'https://sniffaris.co.uk' },
+        { hid: 'og:url', property: 'og:url', content: 'https://www.sniffaris.co.uk' },
         { hid: 'og:type', property: 'og:type', content: 'website' },
       ],
       script: [

@@ -7,7 +7,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 fs-5">
-                    <h1>Welcome to Sniffaris!</h1>
+                    <h1 class="visually-hidden">A dog walking and pet drop-in service offering caring and enriching pet care in Cookridge, Tinshill, and the surrounding areas.</h1>
+                    <h2 class="h1">Welcome to Sniffaris!</h2>
                     <div class="text-center d-block d-lg-none">
                         <nuxt-img :width="350" src="/Sniffaris_Pickle Circle (Tea).png" alt="happy whippet dog" />
                     </div>

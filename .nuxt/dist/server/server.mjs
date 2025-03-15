@@ -618,7 +618,7 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import("./_nuxt/index-BUuniEoO.js")
+    component: () => import("./_nuxt/index-CDS_kidT.js")
   },
   {
     name: "walks",
@@ -1967,17 +1967,17 @@ const _sfc_main$3 = {
       _push(`<nav${ssrRenderAttrs(mergeProps({
         class: "navbar navbar-expand-lg sticky-top border-bottom",
         style: { "border-bottom-color": "#defba8 !important" }
-      }, _attrs))} data-v-f91376e2><div class="container-fluid" data-v-f91376e2><a class="navbar-brand" href="#" data-v-f91376e2>`);
+      }, _attrs))} data-v-aee14d69><div class="container-fluid" data-v-aee14d69><a class="navbar-brand" href="/" data-v-aee14d69>`);
       _push(ssrRenderComponent(_component_nuxt_img, {
         height: 100,
         src: "/Sniffaris_Full Logo - (Custom).png",
         alt: "Sniffaris - Dog Walking, Pet Drop-ins"
       }, null, _parent));
-      _push(`</a><button class="navbar-toggler ms-auto hidden-sm-up float-xs-right custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-v-f91376e2><span class="navbar-toggler-icon" data-v-f91376e2></span></button><div class="collapse navbar-collapse" id="navbarNav" data-v-f91376e2><ul class="navbar-nav ms-auto text-center" data-v-f91376e2><!--[-->`);
+      _push(`</a><button class="navbar-toggler ms-auto hidden-sm-up float-xs-right custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-v-aee14d69><span class="navbar-toggler-icon" data-v-aee14d69></span></button><div class="collapse navbar-collapse" id="navbarNav" data-v-aee14d69><ul class="navbar-nav ms-auto text-center" data-v-aee14d69><!--[-->`);
       ssrRenderList(__props.navLinks, (link, index) => {
         _push(`<!--[-->`);
         if (!link.submenu) {
-          _push(`<li class="nav-item" data-v-f91376e2>`);
+          _push(`<li class="nav-item" data-v-aee14d69>`);
           _push(ssrRenderComponent(_component_NuxtLink, {
             key: link.label,
             to: link.to,
@@ -1996,9 +1996,9 @@ const _sfc_main$3 = {
           }, _parent));
           _push(`</li>`);
         } else {
-          _push(`<li class="nav-item dropdown" data-v-f91376e2><a class="nav-link dropdown-toggle" href="#" role="button"${ssrRenderAttr("id", `submenu-${index}`)} data-bs-toggle="dropdown" aria-expanded="false" data-v-f91376e2>${ssrInterpolate(link.label)}</a><ul class="dropdown-menu"${ssrRenderAttr("aria-labelledby", `submenu-${index}`)} data-v-f91376e2><!--[-->`);
+          _push(`<li class="nav-item dropdown" data-v-aee14d69><a class="nav-link dropdown-toggle" href="#" role="button"${ssrRenderAttr("id", `submenu-${index}`)} data-bs-toggle="dropdown" aria-expanded="false" data-v-aee14d69>${ssrInterpolate(link.label)}</a><ul class="dropdown-menu"${ssrRenderAttr("aria-labelledby", `submenu-${index}`)} data-v-aee14d69><!--[-->`);
           ssrRenderList(link.submenu, (sublink) => {
-            _push(`<li data-v-f91376e2>`);
+            _push(`<li data-v-aee14d69>`);
             _push(ssrRenderComponent(_component_NuxtLink, {
               key: sublink.label,
               to: sublink.to,
@@ -2031,7 +2031,7 @@ _sfc_main$3.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Navbar.vue");
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-const __nuxt_component_0 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-f91376e2"]]);
+const __nuxt_component_0 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-aee14d69"]]);
 const RouteProvider = defineComponent({
   props: {
     vnode: {
