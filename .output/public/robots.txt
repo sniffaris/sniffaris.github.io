@@ -1,1 +1,7 @@
+User-agent: *
+Disallow: /_nuxt/
+Disallow: /cdn-cgi/
 
+Allow: /
+
+Sitemap: https://www.sniffaris.co.uk/sitemap.xml
