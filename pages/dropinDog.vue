@@ -16,7 +16,7 @@
 
                     <p>Your dog will get all the attention they deserve. Whether it’s playtime, a stroll in the garden, feeding, or some much-needed cuddles, we’ve got them covered. </p>
 
-                    <p><strong>£10</strong> - 30 minute drop in.</p>
+                    <p>From £10 - 30 minute drop in.</p>
 
                     <p>Every dog drop-in service starts with a free consultation to understand your dogs unique needs and ensure they get the best possible care.</p>
                     

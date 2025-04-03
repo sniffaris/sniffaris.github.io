@@ -613,7 +613,7 @@ const _routes = [
   {
     name: "dropinDog",
     path: "/dropinDog",
-    component: () => import("./_nuxt/dropinDog-LwD6zBXX.js")
+    component: () => import("./_nuxt/dropinDog-DPx1qJoM.js")
   },
   {
     name: "index",
@@ -623,7 +623,7 @@ const _routes = [
   {
     name: "walks",
     path: "/walks",
-    component: () => import("./_nuxt/walks-KpiAQvOD.js")
+    component: () => import("./_nuxt/walks-SP4EnWQl.js")
   }
 ];
 const _wrapIf = (component, props, slots) => {

@@ -9,15 +9,17 @@
                         <NuxtImg :width="300" class="circle-image" src="/2rfej82u.png" alt="Dog walking in Cookridge LS16" />
                     </div>
                     <br />
-                    <h4>Solo Walks</h4>
+                    <h4 class="fw-bolder">Solo Walks</h4>
 
                     <p>Perfect for dogs who prefer one-on-one time, these walks are fully tailored to meet your dog’s individual needs</p>
 
                     <p><strong>£20</strong> - 1 hour.</p>
 
                     <p><strong>£14</strong> - 30 Minutes.</p>
+                    
+                    <br />
 
-                    <h4>Group Walks</h4>
+                    <h4 class="fw-bolder">Group Walks</h4>
 
                     <p>Small, friendly group walks where your dog can enjoy a fun-filled adventure and a sniffari with their canine companions.</p>
 

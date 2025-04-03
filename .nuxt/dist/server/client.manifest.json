@@ -1,10 +1,10 @@
 {
-  "_Z8owlwyY.js": {
+  "_CySxX3J6.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "Z8owlwyY.js",
+    "file": "CySxX3J6.js",
     "name": "vue.8fc199ce",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
@@ -15,13 +15,13 @@
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "bPj4VzZq.js",
+    "file": "D2gI-7eP.js",
     "name": "error-404",
     "src": "node_modules/nuxt/dist/app/components/error-404.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_Z8owlwyY.js"
+      "_CySxX3J6.js"
     ],
     "css": []
   },
@@ -36,13 +36,13 @@
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "Dub07SfR.js",
+    "file": "D7jWfU6T.js",
     "name": "error-500",
     "src": "node_modules/nuxt/dist/app/components/error-500.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_Z8owlwyY.js"
+      "_CySxX3J6.js"
     ],
     "css": []
   },
@@ -57,7 +57,7 @@
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "CKofROIl.js",
+    "file": "BqqrON4S.js",
     "name": "entry",
     "src": "node_modules/nuxt/dist/app/entry.js",
     "isEntry": true,
@@ -81,7 +81,7 @@
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "DUQf6o-Y.js",
+    "file": "CVHo8emH.js",
     "name": "aboutMe",
     "src": "pages/aboutMe.vue",
     "isDynamicEntry": true,
@@ -94,7 +94,7 @@
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "DNwvL4LS.js",
+    "file": "dhvKS-Ff.js",
     "name": "contact",
     "src": "pages/contact.vue",
     "isDynamicEntry": true,
@@ -107,7 +107,7 @@
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "2klNDd_G.js",
+    "file": "htAUpIP6.js",
     "name": "dropinCat",
     "src": "pages/dropinCat.vue",
     "isDynamicEntry": true,
@@ -120,7 +120,7 @@
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "DAAMhRmy.js",
+    "file": "nXh3I5LI.js",
     "name": "dropinDog",
     "src": "pages/dropinDog.vue",
     "isDynamicEntry": true,
@@ -133,7 +133,7 @@
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "ccUFrAlZ.js",
+    "file": "CWAGGf4M.js",
     "name": "index",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
@@ -153,7 +153,7 @@
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "BM1jZ3hY.js",
+    "file": "B4x3cYaQ.js",
     "name": "walks",
     "src": "pages/walks.vue",
     "isDynamicEntry": true,
