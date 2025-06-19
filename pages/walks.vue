@@ -19,12 +19,6 @@
                     
                     <br />
 
-                    <h4 class="fw-bolder">Group Walks</h4>
-
-                    <p>Small, friendly group walks where your dog can enjoy a fun-filled adventure and a sniffari with their canine companions.</p>
-
-                    <p><strong>£15</strong> - 1 hour.</p>
-
                     <p>Before any dog walks, there will be a free consultation to get to know your dog's needs and give you a chance to meet me. If we’re both happy, we’ll begin with a trial period. This allows me to build a bond with your dog and ensure I’m the right fit to care for your furry friend. </p>
 
                     <p class="fst-italic">Prices may vary for clients located outside the Cookridge/Tinshill area due to travel time, as well as for services requested outside of my standard working hours (8am to 5pm, Monday to Friday)</p>
